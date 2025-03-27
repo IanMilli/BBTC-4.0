@@ -22,3 +22,7 @@ h1 {color: blueviolet;}
   overflow-x: hidden;
   background: var(---background);
  }
+ /*media section*/
+ video {
+  max-width: 100%;
+ }
