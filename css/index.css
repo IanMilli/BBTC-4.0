@@ -1,1 +1,24 @@
+/*text css for app*/
+
 h1 {color: blueviolet;}
+
+/*accesibility css*/
+
+.dark-theme {
+  ---background: #14151a;
+  ---card-border: #0b0e11;
+  ---text: #d4d4d4;
+  ---text-primary: #e7be1b;
+ }
+ .light-theme {
+   ---background: #ffffff;
+   ---card-border: #eaeaff;
+   ---text: #6f6f6f;
+   ---text-primary: #2d2e83;
+ }
+ body {
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background: var(---background);
+ }
