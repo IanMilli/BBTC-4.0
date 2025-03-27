@@ -1,6 +1,23 @@
+/* font pairings
+
+font-family: futura 
+brand standards boys brigade
+*/
+
+/*color pallette
+
+#D7F9FF cyan
+#AFCBFF jordy blue
+#0E1C36 oxford blue
+#F9FBF2 ivory
+#FFF7E0
+*/
+
 /*text css for app*/
 
-h1 {color: blueviolet;}
+h1 {
+  font-family: 'Futura Std', sans-serif !important;
+    color: #0E1C36 !important;}
 
 /*accesibility css*/
 
@@ -25,4 +42,16 @@ h1 {color: blueviolet;}
  /*media section*/
  video {
   max-width: 100%;
+ }
+ /*footer section*/
+ .footerItem {
+  margin-right: 5vh !important;
+  margin-left: 5vh !important;
+ }
+ .fI2 {
+  margin-top: auto;
+  margin-bottom: auto;
+ }
+ .footerNav {
+  height:20px !important;
  }
