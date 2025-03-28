@@ -22,7 +22,9 @@ brand standards boys brigade
 
 h1 {
   font-family: 'Futura Std', sans-serif !important;
-    color: #0E1C36 !important;}
+    color: #0E1C36 !important;
+  }
+  a {text-decoration: none !important;}
 
 /*accesibility css*/
 
