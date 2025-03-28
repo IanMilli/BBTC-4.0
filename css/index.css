@@ -54,9 +54,17 @@ h1 {
   /*css for header navbar*/
   .headerBackground {
     background: var(---background) !important;
-  height: 15vh;
-
-  }
+    }
+    .brandImg {
+      margin-left: 2rem !important;
+      margin-right: 2rem !important;
+    }
+    .hNavItem{
+      margin-left: 2rem !important;
+    }
+    .dropdown{
+      margin-top: 1rem !important;
+    }
 
 /*accesibility css*/
 
@@ -79,7 +87,7 @@ h1 {
   font-family: "futura", sans-serif;
   overflow-x: hidden;
   background: var(---background);
-
+height: 50rem;
  }
 
    .themebut{
