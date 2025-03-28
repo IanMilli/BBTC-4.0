@@ -12,7 +12,26 @@ brand standards boys brigade
 #F9FBF2 ivory
 #FFF7E0
 */
+/*apply font - futura to all page*/
+@font-face {
+  font-family: 'Futura'; /* Define your font family name */
+  src: url('../fonts/futura(1)/') format('woff2'), /* Path to your font file */
+      
+}
+@font-face {
+  font-family: 'Microsoft Sans Serif Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Microsoft Sans Serif Regular'), url('micross.woff') format('woff');
+  }
+  
 
+  @font-face {
+  font-family: 'Microsoft Sans Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Microsoft Sans Serif'), url('micross.woff') format('woff');
+  }
 /*text css for app*/
 * {
   box-sizing: border-box;
@@ -21,8 +40,9 @@ brand standards boys brigade
 }
 
 h1 {
-  font-family: 'Futura Std', sans-serif !important;
+  font-family: 'Futura ', sans-serif !important;
     color: #0E1C36 !important;
+    font-size: 1.2vw;
   }
   a {text-decoration: none !important;}
 
