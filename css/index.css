@@ -41,24 +41,38 @@ brand standards boys brigade
 
 h1 {
   font-family: 'Futura ', sans-serif !important;
-    color: #0E1C36 !important;
+    color: var(---text);
+    font-size: 1.8vw;
+  }
+  h2{
+    font-family: 'Futura ', sans-serif !important;
+    color: var(---text);
     font-size: 1.2vw;
   }
-  a {text-decoration: none !important;}
+  a {text-decoration: none !important;
+  color: var(---text);}
+  /*css for header navbar*/
+  .headerBackground {
+    background: var(---background) !important;
+  height: 15vh;
+
+  }
 
 /*accesibility css*/
 
 .dark-theme {
-  ---background: #14151a;
+  ---background: #0E1C36 ;
   ---card-border: #0b0e11;
   ---text: #F9FBF2 ;
   ---text-primary: #e7be1b;
+
  }
  .light-theme {
    ---background: #F9FBF2 ;
    ---card-border: #eaeaff;
-   ---text: #6f6f6f;
+   ---text: #0E1C36 ;
    ---text-primary: #2d2e83;
+   
  }
  body {
   font-size: 0.9rem;
@@ -67,6 +81,24 @@ h1 {
   background: var(---background);
 
  }
+
+   .themebut{
+    background-color: var(---background)!important;
+    color: var(---text)!important;
+    box-shadow: 0px 0px 2px 2px #AFCBFF;
+    width: 11.5rem !important;
+    scale: 1.2;
+    
+
+   }
+   .googleTranslate{
+    background-color: var(---background)!important;
+    color: var(---text)!important;
+    box-shadow: 0px 0px 2px 2px #AFCBFF;
+    width: 11.5rem !important;
+    margin-bottom: 1rem !important;
+    scale: 1.2;
+   }
  
  /*media section*/
  video {
@@ -111,11 +143,28 @@ nav:hover {
   height: 15vh;
   margin-top: 10vh !important;
 }
+
+.cardBackground{
+  background: var(---background) !important;
+  height: 15vh;
+  margin-top: 10vh !important;
+}
+.cardbtn{
+ max-width: 10rem !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto !important;
+  margin-bottom: 1rem !important;
+
+}
 .footerbtn {
   background-color: #0E1C36 !important;
   color: #FFF7E0 !important;
   box-shadow: 0px 0px 2px 2px #AFCBFF;
-  transform:scale(1.3);
+  width: 10rem !important;
+ 
 }
 .footerbtn:hover {
   background-color:#D7F9FF!important;
@@ -139,6 +188,12 @@ nav:hover {
 .cardBtn{
 margin-top: auto !important;
 margin-bottom: 2rem !important;
+}
+.titleText {
+  margin-top: 2rem !important;
+}
+.typeText {
+  margin-top: 2rem !important;
 }
 
 @keyframes fadeIn {
