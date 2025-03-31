@@ -7,3 +7,56 @@
       /* Add other styles as needed, like reducing font size, etc. */
     }
   }
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .cardBackground {
+      /* Your mobile navbar styles here */
+      
+      height: 12rem !important;
+      width: 15rem !important;
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+  /* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .brandImg {
+      /* Your mobile navbar styles here */
+      
+      height: 5rem !important;
+      width: auto !important;
+      margin-bottom: 1rem !important;
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .house {
+      /* Your mobile navbar styles here */
+      
+     margin-left: 2rem !important;
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+  /* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    video {
+      /* Your mobile navbar styles here */
+      
+     margin-top: 10rem !important;
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+     
+  
+      /* Hide background on collapse (using media queries) */
+      @media (max-width: 768px) { /* Or your breakpoint */
+        .containerFluid.collapse {
+          background-color: none !important; /* Or 'none' */
+        }
+      }
+      /* Hide background on collapse (using media queries) */
+      @media (max-width: 768px) { /* Or your breakpoint */
+        body {
+          height: 100rem !important; /* Or 'none' */
+        }
+      }
