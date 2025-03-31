@@ -79,6 +79,10 @@ h1 {
     .dropdown{
       margin-top: 1rem !important;
     }
+    .navToggle {
+      color: var(---text) !important;
+    
+    }
 
 /*accesibility css*/
 
