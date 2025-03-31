@@ -3,7 +3,7 @@
     .mainNavBar {
       /* Your mobile navbar styles here */
       flex-direction: column; /* Stack items vertically */
-      height: 33rem;
+      height: fit-content !important;
       /* Add other styles as needed, like reducing font size, etc. */
     }
   }
@@ -48,12 +48,7 @@
   }
      
   
-      /* Hide background on collapse (using media queries) */
-      @media (max-width: 768px) { /* Or your breakpoint */
-        .containerFluid.collapse {
-          background-color: none !important; /* Or 'none' */
-        }
-      }
+  
       /* Hide background on collapse (using media queries) */
       @media (max-width: 768px) { /* Or your breakpoint */
         body {
