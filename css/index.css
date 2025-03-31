@@ -42,25 +42,25 @@ brand standards boys brigade
 h1 {
   font-family: 'Futura ', sans-serif !important;
     color: var(---text);
-    font-size: font-size:calc(12px + 1.6vw);
+    font-size: calc(12px + 1.1vw);
     
   }
   h2{
     font-family: 'Futura ', sans-serif !important;
     color: var(---text);
-    font-size: font-size:calc(12px + 1.2vw);
+    font-size: calc(12px + 0.9vw) !important;
 
   }
   h3{
     font-family: 'Futura ', sans-serif !important;
     color: var(---text);
-    font-size: font-size:calc(12px + 1.1vw);
+    font-size: calc(12px + 0.8vw);
 
   }
   p{
     font-family: 'Futura ', sans-serif !important;
     color: var(---text);
-    font-size: font-size:calc(12px + 1vw);
+    font-size: calc(12px + 0.5vw);
 
   }
   a {text-decoration: none !important;
@@ -139,7 +139,7 @@ height: 50rem;
 
   padding: 0;
   opacity: 80%;
-  height: 17vh;
+  height: 10rem;
 }
 .spacerDiv {
  height: 25vh!important;
