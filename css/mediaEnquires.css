@@ -1,0 +1,92 @@
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .mainNavBar {
+      /* Your mobile navbar styles here */
+      flex-direction: column; /* Stack items vertically */
+      height: fit-content !important;
+      
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .cardBackground {
+      /* Your mobile navbar styles here */
+      
+      height: 12rem !important;
+      width: 15rem !important;
+      
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+  /* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .brandImg {
+      /* Your mobile navbar styles here */
+      
+      height: 5rem !important;
+      width: auto !important;
+      margin-bottom: 1rem !important;
+      margin-top: 2rem !important;
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .nav-item {
+      /* Your mobile navbar styles here */
+      
+     margin-left: auto!important;
+     margin-right: auto !important;
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+  /* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    video {
+      /* Your mobile navbar styles here */
+      
+     margin-top: 10rem !important;
+      /* Add other styles as needed, like reducing font size, etc. */
+    }
+  }
+     
+  
+  
+      /* Hide background on collapse (using media queries) */
+      @media (max-width: 768px) { /* Or your breakpoint */
+        body {
+          height: 80rem !important; /* Or 'none' */
+        }
+      }
+      @media (max-width: 768px) {
+        .togBtn {
+          /* Your mobile navbar styles here */
+          
+         margin-right: 3rem !important;
+          /* Add other styles as needed, like reducing font size, etc. */
+        }
+      }
+         
+     
+      @media (max-width: 768px) {
+        .spacerDiv {
+          /* Your mobile navbar styles here */
+          
+         height: 4rem !important;
+         
+          /* Add other styles as needed, like reducing font size, etc. */
+        }
+      }
+      @media (max-width: 768px) {
+        Footer{
+          /* Your mobile navbar styles here */
+          
+          height: fit-content !important;
+          
+          /* Add other styles as needed, like reducing font size, etc. */
+        }
+      }
+      
+         
+         
