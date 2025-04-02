@@ -74,14 +74,12 @@ h1 {
       margin-right: 2rem !important;
     }
     .hNavItem{
-      margin-left: 2rem !important;
+      margin-left: calc(12px + 1vw) !important;
     }
     .dropdown{
       margin-top: 1rem !important;
     }
-    .house{
-      margin-left: 1rem !important;
-    }
+  
    
 
 /*accesibility css*/
@@ -136,6 +134,7 @@ height: 50rem;
     top: 0;
     bottom: 0;
  z-index: -1;
+
   
  }
  /*footer section*/
@@ -146,7 +145,7 @@ height: 50rem;
   height: 10rem;
 }
 .spacerDiv {
- height: 25vh!important;
+ height: 5rem!important;
 }
 
 nav:hover {
@@ -158,8 +157,8 @@ nav:hover {
   margin-left: 5vh !important;
  }
  .fI2 {
-  margin-top: 2vh;
-  margin-bottom: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem !important;
  }
  
 
@@ -173,7 +172,9 @@ nav:hover {
 .cardBackground{
   background: var(---background) !important;
   height: 15vh;
-  margin-top: 10vh !important;
+  margin-bottom: 2vh !important;
+  
+  
 }
 .cardbtn{
  max-width: 10rem !important;
@@ -208,7 +209,10 @@ nav:hover {
  
 }
 .cardHome {
-  margin: auto !important;
+ 
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   opacity: 80%;
 }
 .cardBtn{
