@@ -375,9 +375,10 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_20i89wd', 'template_zrpcu9l', this)
                     .then(() => {
-                        console.log('SUCCESS!');
+                      alert(" Message Successfully Sent!!");
+                      document.getElementById("contact-form").reset();
                     }, (error) => {
-                        console.log('FAILED...', error);
+                      alert(" Message Failed To Send", error);
                     });
             });
         }
