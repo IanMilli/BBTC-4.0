@@ -79,6 +79,15 @@
           /* Add other styles as needed, like reducing font size, etc. */
         }
       }
-      
+
+      @media (max-width: 768px) {
+       .contactForm{
+          /* Your mobile navbar styles here */
+          
+          max-width: 23rem !important;
+          
+          /* Add other styles as needed, like reducing font size, etc. */
+        }
+      }
          
          
