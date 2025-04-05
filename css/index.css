@@ -48,23 +48,27 @@ h1 {
   h2{
     font-family: 'Futura ', sans-serif !important;
     color: var(---text);
-    font-size: calc(12px + 0.5vw) !important;
+    font-size: calc(12px + 0.3vw) !important;
 
   }
   h3{
     font-family: 'Futura ', sans-serif !important;
     color: var(---text);
-    font-size: calc(12px + 0.8vw);
+    font-size: calc(12px + 0.2vw);
 
   }
   p{
     font-family: 'Futura ', sans-serif !important;
     color: var(---text);
-    font-size: calc(12px + 0.5vw);
+    font-size: calc(12px + 0.5vw) !important;
 
   }
   a {text-decoration: none !important;
-  color: var(---text);}
+  color: var(---text);
+font-size: calc(12px+0.5vw) !important;
+}
+
+
   /*css for header navbar*/
   .headerBackground {
     background: var(---background) !important;
@@ -103,7 +107,8 @@ h1 {
   font-family: "futura", sans-serif;
   overflow-x: hidden;
   background: var(---background);
-height: 50rem;
+height: 30rem;
+width: 100% !important;
  }
 
    .themebut{
@@ -157,8 +162,8 @@ nav:hover {
   margin-left: 5vh !important;
  }
  .fI2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
  }
  
 
@@ -200,7 +205,7 @@ nav:hover {
 }
 /*central box section fade in*/
 .fade-in-image {
-  animation:bg 5s linear infinite;
+  animation:bg 15s linear infinite;
   animation: fadeIn 20s;
   -webkit-animation: fadeIn 20s;
   -moz-animation: fadeIn 20s;
@@ -225,6 +230,8 @@ margin-bottom: 2rem !important;
 .typeText {
   margin-top: 2rem !important;
 }
+
+
 
 @keyframes fadeIn {
   0% { opacity: 0; }

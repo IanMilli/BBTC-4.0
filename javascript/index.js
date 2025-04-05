@@ -66,3 +66,6 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+/*animation js*/
+// All animations will take twice the time to accomplish
+document.documentElement.style.setProperty('--animate-duration', '7s');
