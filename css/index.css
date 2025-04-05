@@ -10,7 +10,7 @@ brand standards boys brigade
 #AFCBFF jordy blue
 #0E1C36 oxford blue
 #F9FBF2 ivory
-#FFF7E0
+#FFF7E0 yellow
 */
 /*apply font - futura to all page*/
 @font-face {
@@ -96,7 +96,8 @@ font-size: calc(12px+0.5vw) !important;
 
  }
  .light-theme {
-   ---background: #F9FBF2 ;
+   ---background: #AFCBFF
+    ;
    ---card-border: #eaeaff;
    ---text: #0E1C36 ;
    ---text-primary: #2d2e83;
