@@ -218,7 +218,7 @@
                 <h1 class="mb-4 text-center">Send us a message</h3>
 
 
-                  <form id="contactForm" data-sb-form-api-token="24955269-e787-4997-b3f0-44e7e016d0d0">
+                  <form id="contact-form">
 
 
 
@@ -226,7 +226,7 @@
                       <div class="col-md-6 mb-3">
                         <label class="form-label ">First Name</label>
                         <input type="text" class="form-control contactForm" placeholder="John" id="firstName"
-                          name="namw">
+                          name="name">
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label">Last Name</label>
@@ -256,18 +256,9 @@
                     <div class="mb-4">
                       <label class="form-label">Message</label>
                       <textarea class="form-control contactForm" rows="5" placeholder="Your message here..."
-                        id="message:" name="message:"></textarea>
+                        id="message:" name="message"></textarea>
                     </div>
-                    <!-- Form submissions success message -->
-                    <div class="d-none" id="submitSuccessMessage">
-                      <div class="text-center mb-3">Form submission successful!</div>
-                    </div>
-
-                    <!-- Form submissions error message -->
-                    <div class="d-none" id="submitErrorMessage">
-                      <div class="text-center text-danger mb-3">Error sending message!</div>
-                    </div>
-
+                  
 
 
                     <button type="submit" class="btn contactButton">Send Message</button>
@@ -379,10 +370,10 @@
     </script>
     <script type="text/javascript">
         window.onload = function() {
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('service_grhe1xw', 'template_zrpcu9l', this)
+                emailjs.sendForm('service_20i89wd', 'template_zrpcu9l', this)
                     .then(() => {
                         console.log('SUCCESS!');
                     }, (error) => {
