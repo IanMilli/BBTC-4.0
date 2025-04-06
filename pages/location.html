@@ -1,296 +1,60 @@
-<!--AIzaSyD1mUvrulX2dvWjb656uedb85mel-nlL6E-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--link to bootstrap 5.3 css-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <!--Lonk to futura font-->
-  <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
-
-  <!--Link to animation text css - for central block-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <!--link to contact css file-->
-  <link rel="stylesheet" href="../css/contact.css">
-  <!--link to index css file-->
-  <link rel="stylesheet" href="../css/index.css">
-  <!--link to media enquires css file-->
-  <link rel="stylesheet" href="../css/mediaEnquires.css">
-  <title>Location</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap with Multiple Markers and Info Windows Popups Using JavaScript | Tutorialswebsite</title>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #Mymap {
+    width: 100%;
+    height: 500px; 
+}
+    </style>
 </head>
-
-<body class="dark-theme">
-  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-
-      <img class="brandImg" src="../media/index/images/bb_logo_solid.png"
-        alt="Northwest Boys'Brigade Training and Activity Centre" height="80 rem">
-      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <div>
-            <li class="nav-item col text-center">
-              <a class="nav-link active " aria-current="page" href="../index.html">
-                <h2><i class="fa-solid fa-house"></i></h2>
-              </a>
-            </li>
-            <!--about us dropdown menu-->
-            <li class="nav-item  dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>The Centre</h2>
-              </a>
-              <ul class="dropdown-menu text-center">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="./pages/contact.html">
-                <h2>Contact Us <i class="fa-solid fa-phone"></i> <i class="fa-solid fa-envelope"></i> <i
-                    class="fa-solid fa-address-card"></i> </h2>
-              </a>
-            </li>
-            <!--accomodation dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>Residential Facilities <i class="fa-solid fa-bed"></i> <i class="fa-solid fa-tents"></i></h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="#">
-                <h2>How To Find Us <i class="fa-solid fa-map-location-dot"></i> </h2>
-              </a>
-            </li>
-            <!--school packages dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2></i>School Packages <i class="fa-solid fa-school"></i> </h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="#">
-                <h2>Sports Barn Hire <i class="fa-solid fa-futbol"></i> </h2>
-              </a>
-            </li>
-            <!--on site activities dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>On Site Activities <i class="fa-solid fa-person-running"></i></h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="#">
-                <h2>Leaders Information <i class="fa-solid fa-book-open-reader"></i></h2>
-              </a>
-            </li>
-            <!--accomodation dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>Local Amenities <i class="fa-solid fa-person-swimming"></i> <i
-                    class="fa-solid fa-place-of-worship"></i> <i class="fa-solid fa-hospital"></i></h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <li class="nav-item footerItem text-center">
-            <div className='copyright '>
-              <a href="https://www.bb-northwest.org.uk/centre/"
-                class="btn footerbtn animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
-                Now!!</a>
-            </div>
-          </li>
-
-
-
-
-  </nav>
-
-
-  <!--map section-->
-  <gmp-map
-  center="43.4142989,-124.2301242"
-  zoom="4"
-  map-id="locateMap_ID"
-  style="height: 400px"
->
-  <gmp-advanced-marker
-    position="37.4220656,-122.0840897"
-    title="Mountain View, CA"
-  ></gmp-advanced-marker>
-  
-</gmp-map>
-
-<!-- 
-  The `defer` attribute causes the script to execute after the full HTML
-  document has been parsed. For non-blocking uses, avoiding race conditions,
-  and consistent behavior across browsers, consider loading using Promises. See
-  https://developers.google.com/maps/documentation/javascript/load-maps-js-api
-  for more information.
-  -->
-
-
-
-
-
-  <!--footer section-->
-  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary static-bottom">
-    <div class="container-fluid">
-      <div class="m-auto">
-        <li class="nav-item footerItem  fI2">
-          <div class="googleTranslate " id="google_translate_element"></div>
-        </li>
-        <li class="nav-item footerItem fI2 ">
-          <button class="themebut" onclick="toggleMode()"> Change Colour Theme <i
-              class="fa-solid fa-palette"></i></button>
-        </li>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
-        <div class="m-auto">
-          <ul class="navbar-nav m-auto mb-5  ">
-            <li class="nav-item footerItem fI2 text-center">
-              <a
-                href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>
-                Registered Charity: 1097985</a>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="./">
-                  © 2025
-                  Copyright:</a>
-
-              </div>
-              <div><a href="./"> The Boys' Northwest Training and Activity Centre
-                </a></div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="tel:+4401772685000">
-                  <i class="fa-solid fa-phone"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="mailto:office@bb-northwest.org.uk">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div>
-                <a href="./pages/contact.html">
-                  <i class="fa-solid fa-address-card"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem text-center fI2">
-              <div className='copyright'>
-
-                <a href="https://www.bb-northwest.org.uk/centre/"
-                  class="btn footerbtn animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
-                  Now!!</a>
-              </div>
-            </li>
-        </div>
-
-      </div>
-  </nav>
- <!-- Success Alert -->
-<div class="alert popup popupSuccess fade show" style="display: none;" id="success">
-  <div class="mb-2 text-center"><h1>Success!</h1></div>
-  <div class="mb-2 text-center"><h2> Message Successfully Sent!! </h2></div>
-  <div class="mb-2 text-center"><h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2></div>
-  <div class="mb-2 text-center"><h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2></div>
-</div>
-
-<!-- Error Alert -->
-<div class="alert popup popupError fade show" style="display: none;" id="error">
-  <div class="mb-2 text-center"><h1>Error!</h1></div>
-  <div class="mb-2 text-center"><h2> Message Failed To Send!! </h2></div>
-  <div class="mb-2 text-center"><h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2></div>
-  <div class="mb-2 text-center"><h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2></div>
-</div>
-</body>
-<!--Link to index.js-->
-<script src="../javascript/index.js"></script>
-
-<!--link for bootstrap 5.3 javascript-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<!--link for fontawesome icons-->
-<script src="https://kit.fontawesome.com/b1c04ffae0.js" crossorigin="anonymous"></script>
-<!--javascript function for google translate-->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-  }
+<body>
+ 
+<div id="Mymap"></div>
+<!-- Initialize & add OpenStreetMap to HTML element -->
+<script>
+// Define multiple markers location, latitude, and longitude
+const locations = [
+    [ 28.5847845, 77.0672173, '<b>Codevyne Creatives Pvt Ltd</b> <br>D 480, 2nd Floor, Dwarka Sector-7, Delhi 110075'],
+    [ 28.5884709, 77.0812865, '<b>Palam metro gate no 2</b> <br>Pocket 13, Mangalpuri I, Palam, New Delhi, Delhi, 110045'],
+    [ 28.57297, 77.0636461, '<b>Dwarka Sector 9 Metro Station</b> <br>Dwarka Sector 9, Dwarka, Delhi, 110077'],
+    [ 28.5811261, 77.0525246, '<b>Metro Station Dwarka Sector-10</b> <br>Sector 10 Dwarka, Dwarka, Delhi, 110075'],
+];
+ 
+// Set container element to embed map
+const map = L.map('Mymap').setView([locations[0][0], locations[0][1]], 13);
+ 
+// Add copyright attribution
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {
+    foo: 'bar',
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
+).addTo(map);
+ 
+// Add multiple markers to map
+for (var i = 0; i < locations.length; i++) {
+  	marker = new L.marker(
+		[locations[i][0], locations[i][1]]
+	)
+    .bindPopup(locations[i][2])
+    .addTo(map);
+	
+    // Set zoom level on marker click
+	marker.on('click', function(mrk) {
+		map.setView(
+			[
+				mrk.latlng.lat,
+				mrk.latlng.lng
+			],
+		14
+		);
+	});
+}
 </script>
-<!--script for google translate-->
-<script type="text/javascript"
-  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <!--link to google map-->
-  <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1mUvrulX2dvWjb656uedb85mel-nlL6E&libraries=maps,marker&v=beta"
-  defer
-></script>
+ 
+</body>
 </html>
