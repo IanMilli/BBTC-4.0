@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../css/index.css">
   <!--link to media enquires css file-->
   <link rel="stylesheet" href="../css/mediaEnquires.css">
-  <title>Home Page</title>
+  <title>Contact</title>
 </head>
 
 <body class="dark-theme">
@@ -38,7 +38,7 @@
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <div>
             <li class="nav-item col text-center">
-              <a class="nav-link active " aria-current="page" href="#">
+              <a class="nav-link active " aria-current="page" href="../index.html">
                 <h2><i class="fa-solid fa-house"></i></h2>
               </a>
             </li>
@@ -83,7 +83,7 @@
           </div>
           <div class="hNavItem">
             <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="../pages/location.html">
                 <h2>How To Find Us <i class="fa-solid fa-map-location-dot"></i> </h2>
               </a>
             </li>
@@ -204,9 +204,9 @@
                   </div>
 
                   <div class="social-links">
-                    <h6 class="mb-3">Follow Us</h6>
+                    <h6 class="mb-3">Follow Us :</h6>
                     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-x"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                   </div>
@@ -339,6 +339,21 @@
 
       </div>
   </nav>
+ <!-- Success Alert -->
+<div class="alert popup popupSuccess fade show" style="display: none;" id="success">
+  <div class="mb-2 text-center"><h1>Success!</h1></div>
+  <div class="mb-2 text-center"><h2> Message Successfully Sent!! </h2></div>
+  <div class="mb-2 text-center"><h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2></div>
+  <div class="mb-2 text-center"><h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2></div>
+</div>
+
+<!-- Error Alert -->
+<div class="alert popup popupError fade show" style="display: none;" id="error">
+  <div class="mb-2 text-center"><h1>Error!</h1></div>
+  <div class="mb-2 text-center"><h2> Message Failed To Send!! </h2></div>
+  <div class="mb-2 text-center"><h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2></div>
+  <div class="mb-2 text-center"><h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2></div>
+</div>
 </body>
 <!--Link to index.js-->
 <script src="../javascript/index.js"></script>
@@ -375,10 +390,10 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_20i89wd', 'template_zrpcu9l', this)
                     .then(() => {
-                      alert(" Message Successfully Sent!!");
+                      document.getElementById("success").style.display = "block";
                       document.getElementById("contact-form").reset();
                     }, (error) => {
-                      alert(" Message Failed To Send", error);
+                      document.getElementById("error").style.display = "block";
                     });
             });
         }
