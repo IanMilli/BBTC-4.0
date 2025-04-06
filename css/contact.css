@@ -92,3 +92,20 @@
   background-color:#D7F9FF!important;
   transition: 0.7s !important;
   color:#0E1C36 !important;}
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    height: auto;
+    z-index: +1;
+    
+  }
+  .popupSuccess {
+    background-color: green;
+  }
+  .popupError {
+    background-color: maroon;
+  }
