@@ -15,7 +15,10 @@
   width:30rem !important;
 }
 
-
+.mapA {
+  margin-left: auto !important;
+  margin-right: auto !important; 
+}
 
 .contact-item:hover {
   transform: translateX(2rem);
