@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenStreetMap with Multiple Markers and Info Windows Popups Using JavaScript | Tutorialswebsite</title>
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-   <!--link to bootstrap 5.3 css-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--link to bootstrap 5.3 css-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<!--Lonk to futura font-->
-<link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+  <!--Lonk to futura font-->
+  <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
 
-<!--Link to animation text css - for central block-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<!--link to index css file-->
-<link rel="stylesheet" href="../css/index.css">
-<!--link to media enquires css file-->
-<link rel="stylesheet" href="../css/mediaEnquires.css">
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <style>
-        #Mymap {
-    width: 100%;
-    height: 500px; 
-}
-    </style>
+  <!--Link to animation text css - for central block-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--link to contact css file-->
+  <link rel="stylesheet" href="../css/map.css">
+  <!--link to index css file-->
+  <link rel="stylesheet" href="../css/index.css">
+  <!--link to media enquires css file-->
+  <link rel="stylesheet" href="../css/mediaEnquires.css">
+  <title>Contact</title>
 </head>
+
 <body class="dark-theme">
   <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -164,116 +160,93 @@
 
 
   </nav>
- 
-<div id="Mymap"></div>
- <!--footer section-->
- <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary static-bottom">
-  <div class="container-fluid">
-    <div class="m-auto">
-      <li class="nav-item footerItem  fI2">
-        <div class="googleTranslate " id="google_translate_element"></div>
-      </li>
-      <li class="nav-item footerItem fI2 ">
-        <button class="themebut" onclick="toggleMode()"> Change Colour Theme <i
-            class="fa-solid fa-palette"></i></button>
-      </li>
+
+
+  <!--map section-->
+  <gmpx-api-loader key="AIzaSyCFVgc8vqA4k030dFjOKHu0Hn8WIidoQGY" solution-channel="GMP_GE_mapsandplacesautocomplete_v2">
+  </gmpx-api-loader>
+  <gmp-map center="40.749933,-73.98633" zoom="13" map-id="DEMO_MAP_ID">
+    <div slot="control-block-start-inline-start" class="place-picker-container">
+      <gmpx-place-picker placeholder="Enter an address"></gmpx-place-picker>
     </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <gmp-advanced-marker></gmp-advanced-marker>
+  </gmp-map>
 
 
+  <!--footer section-->
+  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary static-bottom">
+    <div class="container-fluid">
       <div class="m-auto">
-        <ul class="navbar-nav m-auto mb-5  ">
-          <li class="nav-item footerItem fI2 text-center">
-            <a
-              href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>
-              Registered Charity: 1097985</a>
-          </li>
-          <li class="nav-item footerItem fI2 text-center">
-            <div className='copyright'>
-              <a href="./">
-                © 2025
-                Copyright:</a>
-
-            </div>
-            <div><a href="./"> The Boys' Northwest Training and Activity Centre
-              </a></div>
-          </li>
-          <li class="nav-item footerItem fI2 text-center">
-            <div className='copyright'>
-              <a href="tel:+4401772685000">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item footerItem fI2 text-center">
-            <div className='copyright'>
-              <a href="mailto:office@bb-northwest.org.uk">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item footerItem fI2 text-center">
-            <div>
-              <a href="./pages/contact.html">
-                <i class="fa-solid fa-address-card"></i>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item footerItem text-center fI2">
-            <div className='copyright'>
-
-              <a href="https://www.bb-northwest.org.uk/centre/"
-                class="btn footerbtn animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
-                Now!!</a>
-            </div>
-          </li>
+        <li class="nav-item footerItem  fI2">
+          <div class="googleTranslate " id="google_translate_element"></div>
+        </li>
+        <li class="nav-item footerItem fI2 ">
+          <button class="themebut" onclick="toggleMode()"> Change Colour Theme <i
+              class="fa-solid fa-palette"></i></button>
+        </li>
       </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    </div>
-</nav>
-<!-- Initialize & add OpenStreetMap to HTML element -->
-<script>
-// Define multiple markers location, latitude, and longitude
-const locations = [
-    [ 28.5847845, 77.0672173, '<b>Codevyne Creatives Pvt Ltd</b> <br>D 480, 2nd Floor, Dwarka Sector-7, Delhi 110075'],
-    [ 28.5884709, 77.0812865, '<b>Palam metro gate no 2</b> <br>Pocket 13, Mangalpuri I, Palam, New Delhi, Delhi, 110045'],
-    [ 28.57297, 77.0636461, '<b>Dwarka Sector 9 Metro Station</b> <br>Dwarka Sector 9, Dwarka, Delhi, 110077'],
-    [ 28.5811261, 77.0525246, '<b>Metro Station Dwarka Sector-10</b> <br>Sector 10 Dwarka, Dwarka, Delhi, 110075'],
-];
- 
-// Set container element to embed map
-const map = L.map('Mymap').setView([locations[0][0], locations[0][1]], 13);
- 
-// Add copyright attribution
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {
-    foo: 'bar',
-    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
-).addTo(map);
- 
-// Add multiple markers to map
-for (var i = 0; i < locations.length; i++) {
-  	marker = new L.marker(
-		[locations[i][0], locations[i][1]]
-	)
-    .bindPopup(locations[i][2])
-    .addTo(map);
-	
-    // Set zoom level on marker click
-	marker.on('click', function(mrk) {
-		map.setView(
-			[
-				mrk.latlng.lat,
-				mrk.latlng.lng
-			],
-		14
-		);
-	});
-}
-</script>
- 
+
+        <div class="m-auto">
+          <ul class="navbar-nav m-auto mb-5  ">
+            <li class="nav-item footerItem fI2 text-center">
+              <a
+                href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>
+                Registered Charity: 1097985</a>
+            </li>
+            <li class="nav-item footerItem fI2 text-center">
+              <div className='copyright'>
+                <a href="./">
+                  © 2025
+                  Copyright:</a>
+
+              </div>
+              <div><a href="./"> The Boys' Northwest Training and Activity Centre
+                </a></div>
+            </li>
+            <li class="nav-item footerItem fI2 text-center">
+              <div className='copyright'>
+                <a href="tel:+4401772685000">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item footerItem fI2 text-center">
+              <div className='copyright'>
+                <a href="mailto:office@bb-northwest.org.uk">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item footerItem fI2 text-center">
+              <div>
+                <a href="./pages/contact.html">
+                  <i class="fa-solid fa-address-card"></i>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item footerItem text-center fI2">
+              <div className='copyright'>
+
+                <a href="https://www.bb-northwest.org.uk/centre/"
+                  class="btn footerbtn animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
+                  Now!!</a>
+              </div>
+            </li>
+        </div>
+
+      </div>
+  </nav>
+
+
+
 </body>
 <!--Link to index.js-->
-<script src="../javascript/index.js"></script>
+<script src="../javascript/map.js"></script>
+<!--script for map-->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js">
+    </script>
 
 <!--link for bootstrap 5.3 javascript-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -290,30 +263,6 @@ for (var i = 0; i < locations.length; i++) {
 <!--script for google translate-->
 <script type="text/javascript"
   src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <!--link to server tonsend form email-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "OwnMI8f5wR8R7WxAV",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('service_20i89wd', 'template_zrpcu9l', this)
-                    .then(() => {
-                      document.getElementById("success").style.display = "block";
-                      document.getElementById("contact-form").reset();
-                    }, (error) => {
-                      document.getElementById("error").style.display = "block";
-                    });
-            });
-        }
-    </script>
-</html>
+ 
+   
 </html>
