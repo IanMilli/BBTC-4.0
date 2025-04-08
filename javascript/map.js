@@ -87,5 +87,23 @@ async function init() {
     }
   });
 }
+const panorama = new google.maps.StreetViewPanorama(
+    document.getElementById("pano"),
+    {
+      position: fenway,
+      pov: {
+        heading: 34,
+        pitch: 10,
+      },
+    }
+  );
+
+  map.setStreetView(panorama);
+
 
 window.initMap = initMap;
+
+   
+ 
+  
+  
