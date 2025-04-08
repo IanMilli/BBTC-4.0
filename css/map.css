@@ -11,9 +11,8 @@
 
   /*card css*/
   .row {
-    max-width: 114rem;
-    margin: 0 auto; }
-    .row::after {
+    max-width: 200rem;
+    margin-left: 5rem !important; 
       content: '';
       clear: both;
       display: table; }
@@ -25,7 +24,7 @@
       margin-bottom: 6rem; }
     .row .col-1-of-2 {
       width: calc((100% - 6rem) / 2); }
-    .row .col-1-of-3 {
+    .row .col-1-of-4 {
       width: calc((100% - 2 * 6rem) / 3); }
     .row .col-1-of-4 {
       width: calc((100% - 3 * 6rem) / 4); }
@@ -42,9 +41,13 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 52rem; }
+    height: 35rem;
+  width: 17rem; }
+    .cardMarg{
+margin-left: 7rem !important;
+margin-top: 2rem !important;}
     .card__side {
-      height: 52rem;
+      height: 35rem;
       transition: all .8s ease;
       position: absolute;
       top: 0;
@@ -74,23 +77,25 @@
       background-blend-mode: screen;
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
       .card__picture--1 {
-        background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(https://picsum.photos/300/250?random=5); }
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(https://picsum.photos/id/352/300/250); }
       .card__picture--2 {
-        background-image: linear-gradient(to right bottom, #000428, #004e92), url(https://picsum.photos/300/250?random=6); }
+        background-image: linear-gradient(to right bottom, #000428, #004e92), url(https://picsum.photos/id/204/300/250); }
       .card__picture--3 {
-        background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(https://picsum.photos/300/250?random=7); }
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(https://picsum.photos/id/320/300/250); }
+        .card__picture--4 {
+          background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(https://picsum.photos/id/364/300/250); }
     .card__heading {
       font-size: 2.8rem;
       text-transform: uppercase;
       color: #fff;
-      font-weight: 300;
+      font-weight: 200;
       position: absolute;
       top: 12rem;
-      right: 2rem;
+     
       text-align: right;
-      width: 74%; }
+      width: 85%; }
     .card__heading-span {
-      padding: .5rem 1.5rem;
+      padding: .2rem .2rem !important;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone; }
       .card__heading-span--1 {
@@ -134,7 +139,7 @@
   
   .btn:link, .btn:visited {
     text-transform: uppercase;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 2rem;
     display: inline-block;
     transition: all .2s;
     color: initial;
@@ -170,7 +175,10 @@
   
   .btn--white {
     background-color: #fff;
-    border-radius: 10rem; }
+    border-radius: 10rem;
+  width: 15rem; 
+margin-top: 1rem !important;
+margin-bottom: 1rem !important;}
   
   .btn--blue {
     background-color: #004e92;
