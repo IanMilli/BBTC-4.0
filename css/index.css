@@ -39,6 +39,7 @@ brand standards boys brigade
   padding: 0 !important;
 }
 
+
 h1 {
   font-family: 'Futura ', sans-serif !important;
     color: var(---text);
@@ -83,7 +84,10 @@ font-size: calc(12px+0.5vw) !important;
     .dropdown{
       margin-top: 1rem !important;
     }
-  
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-color: var(---text);
+    }
    
 
 /*accesibility css*/
@@ -116,7 +120,7 @@ width: 100% !important;
     background-color: var(---background)!important;
     color: var(---text)!important;
     box-shadow: 0px 0px 2px 2px #AFCBFF;
-    width: 11.5rem !important;
+    width: 18.5rem !important;
     scale: 1.2;
     
 
@@ -125,7 +129,7 @@ width: 100% !important;
     background-color: var(---background)!important;
     color: var(---text)!important;
     box-shadow: 0px 0px 2px 2px #AFCBFF;
-    width: 11.5rem !important;
+    width: fit-content!important;
     margin-bottom: 1rem !important;
     scale: 1.2;
     
@@ -169,6 +173,9 @@ width: 100% !important;
 }
 .spacerDiv {
  height: 5rem!important;
+}
+.spacerDiv2{
+height:10rem !important
 }
 
 nav:hover {
@@ -214,13 +221,7 @@ nav:hover {
   margin-bottom: 1rem !important;
 
 }
-.footerbtn {
-  background-color: #0E1C36 !important;
-  color: #FFF7E0 !important;
-  box-shadow: 0px 0px 2px 2px #AFCBFF;
-  width: 10rem !important;
- 
-}
+
 .footerbtn:hover {
   background-color:#D7F9FF!important;
   transition: 0.7s !important;

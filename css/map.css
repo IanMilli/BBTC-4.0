@@ -1,13 +1,6 @@
 
 /*map css*/
-.place-picker-container {
-    padding: 20px;
-    margin-top: 0.7rem !important;
-  }
-  .centreIcon {
-    height: auto !important;
-    width: 15rem !important;
-  }
+
 
   /*card css*/
   
@@ -189,9 +182,10 @@ width: 100%;
 height: max-content;}
 
 .btn--blue {
-  background-color: #004e92;
+  background-color: #0E1C36;
   border-radius: 10rem;
-  color: #fff !important; }
+  color: #fff !important;
+width: 15rem !important; }
 
 .text-center {
   text-align: center; }
