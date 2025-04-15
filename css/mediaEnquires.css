@@ -89,5 +89,14 @@
           /* Add other styles as needed, like reducing font size, etc. */
         }
       }
+      @media (max-width: 768px) {
+        .fI3{
+           /* Your mobile navbar styles here */
+           
+           margin-right: 12rem !important;
+           
+           /* Add other styles as needed, like reducing font size, etc. */
+         }
+       }
          
          
