@@ -131,10 +131,17 @@ width: 100% !important;
     
    }
  /*map css*/
+ .mapCard1{
+  background-color: var(---background) !important;
+  color: var(---text);
+  height: 35rem !important;
+  border-color: var(---background) !important;
+ }
  .mapCard{
   background-color: var(---background) !important;
   color: var(---text);
   height: 40rem !important;
+  border-color: var(---background) !important;
  }
  .mapA{
   margin-bottom: 2rem !important;
