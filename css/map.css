@@ -184,11 +184,7 @@ border-color: var(---background);
 width: 100%; 
 height: max-content;}
 
-.btn--blue {
-  background-color: #0E1C36;
-  border-radius: 10rem;
-  color: #fff !important;
-width: 15rem !important; }
+
 
 .text-center {
   text-align: center; }

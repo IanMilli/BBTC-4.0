@@ -94,17 +94,18 @@ font-size: calc(12px+0.5vw) !important;
 
 .dark-theme {
   ---background: #0E1C36 ;
+  ---background-2:#F9FBF2;
   ---card-border: #0b0e11;
   ---text: #F9FBF2 ;
-  ---text-primary: #e7be1b;
+  ---text-primary: #0E1C36;
 
  }
  .light-theme {
-   ---background: #AFCBFF
-    ;
+   ---background: #AFCBFF    ;
+   ---background-2:#F9FBF2;
    ---card-border: #eaeaff;
    ---text: #0E1C36 ;
-   ---text-primary: #2d2e83;
+   ---text-primary: #F9FBF2 ;
    
  }
  body {
@@ -121,10 +122,22 @@ width: 100% !important;
     color: var(---text)!important;
     box-shadow: 0px 0px 2px 2px #AFCBFF;
     width: fit-content!important;
-    scale: 1.2;
+    scale: 1.2;}
+    .themebut:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    background-color: var(---background-2) !important; 
+    color: var(---text-primary)!important;
+    box-shadow: 0px 0px 2px 2px #AFCBFF;
+    width: fit-content!important;
+    scale: 1.2;}
+    
+    
+    
+    
     
 
-   }
+   
    .googleTranslate{
     background-color: var(---background)!important;
     color: var(---text)!important;
@@ -144,7 +157,7 @@ width: 100% !important;
  .mapCard{
   background-color: var(---background) !important;
   color: var(---text);
-  height: 40rem !important;
+  height: 30rem !important;
   border-color: var(---background) !important;
  }
  .mapA{
@@ -193,10 +206,11 @@ nav:hover {
  .fI3 {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
-  margin-right: auto !important;
-  margin-left: auto !important;
+  
  }
-
+.footerbtn {
+  background-color: var(---background-2) !important;
+}
  
 .footerBackground {
   background: var(---background) !important;
@@ -222,11 +236,8 @@ nav:hover {
 
 }
 
-.footerbtn:hover {
-  background-color:#D7F9FF!important;
-  transition: 0.7s !important;
-  color:#0E1C36 !important;
-}
+
+
 /*central box section fade in*/
 .fade-in-image {
   animation:bg 15s linear infinite;
