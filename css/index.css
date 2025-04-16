@@ -102,7 +102,7 @@ font-size: calc(12px+0.5vw) !important;
  }
  .light-theme {
    ---background: #AFCBFF    ;
-   ---background-2:#F9FBF2;
+   ---background-2:#0E1C36;
    ---card-border: #eaeaff;
    ---text: #0E1C36 ;
    ---text-primary: #F9FBF2 ;
@@ -160,6 +160,12 @@ width: 100% !important;
   height: 30rem !important;
   border-color: var(---background) !important;
  }
+ .mapCard2{
+  background-color: var(---background) !important;
+  color: var(---text);
+  height: 40rem !important;
+  border-color: var(---background) !important;
+ }
  .mapA{
   margin-bottom: 2rem !important;
  }
@@ -173,6 +179,19 @@ width: 100% !important;
     top: 0;
     bottom: 0;
  z-index: -1;
+
+  
+ }
+ video2 {
+  max-width: 100%;
+  object-fit: cover !important;
+  position: fixed;
+   left: 0;
+   right: 0;
+    top: 0;
+    bottom: 0;
+ z-index: -1;
+ opacity: 60%;
 
   
  }

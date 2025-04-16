@@ -1,8 +1,4 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+
   
   .neighborhood-discovery {
     box-sizing: border-box;
@@ -28,20 +24,20 @@ html, body {
   }
   
   .neighborhood-discovery .info {
-    color: #555;
+    
     font-size: 0.9em;
     margin-top: 0.3em;
   }
   
   .neighborhood-discovery .panel {
-    background: white;
+    background: black;
     bottom: 0;
     box-sizing: border-box;
     left: 0;
     overflow-y: auto;
     position: absolute;
     top: 0;
-    width: 20em;
+    width: 35rem;
   }
   
   .neighborhood-discovery .panel.no-scroll {
@@ -93,6 +89,7 @@ html, body {
       right: 0;
       top: 50%;
       width: unset;
+      height: 20rem;
     }
   
     .neighborhood-discovery .map {
