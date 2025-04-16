@@ -30,7 +30,7 @@
   }
   
   .neighborhood-discovery .panel {
-    background: black;
+    background: var(---background);
     bottom: 0;
     box-sizing: border-box;
     left: 0;
@@ -184,8 +184,10 @@
   }
   
   .neighborhood-discovery .details-panel .back-button {
-    color: #4285f4;
+    color: var(---text);
+    background-color: var(---background);
     padding: 0.9em;
+    width: 100%;
   }
   
   .neighborhood-discovery .details-panel .back-button .icon {
@@ -319,3 +321,4 @@
     font-size: 0.8em;
     margin-top: 0.3em;
   }
+  
