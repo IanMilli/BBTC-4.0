@@ -1,322 +1,324 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--link to bootstrap 5.3 css-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <!--Lonk to futura font-->
-  <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
-
-  <!--Link to animation text css - for central block-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <!--link to contact css file-->
-  <link rel="stylesheet" href="../css/contact.css">
-  <!--link to index css file-->
-  <link rel="stylesheet" href="../css/index.css">
-  <!--link to media enquires css file-->
-  <link rel="stylesheet" href="../css/mediaEnquires.css">
-  <title>Manchester Airport Directions</title>
-</head>
-
-<body class="dark-theme">
-  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-
-      <img class="brandImg" src="../media/index/images/bb_logo_solid.png"
-        alt="Northwest Boys'Brigade Training and Activity Centre" height="80 rem">
-      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <div>
-            <li class="nav-item col text-center">
-              <a class="nav-link active " aria-current="page" href="../index.html">
-                <h2><i class="fa-solid fa-house"></i></h2>
-              </a>
-            </li>
-            <!--about us dropdown menu-->
-            <li class="nav-item  dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>The Centre</h2>
-              </a>
-              <ul class="dropdown-menu text-center">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="../pages/contact.html">
-                <h2>Contact Us <i class="fa-solid fa-phone"></i> <i class="fa-solid fa-envelope"></i> <i
-                    class="fa-solid fa-address-card"></i> </h2>
-              </a>
-            </li>
-            <!--accomodation dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>Residential Facilities <i class="fa-solid fa-bed"></i> <i class="fa-solid fa-tents"></i></h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="../pages/location.html">
-                <h2>How To Find Us <i class="fa-solid fa-map-location-dot"></i> </h2>
-              </a>
-            </li>
-            <!--school packages dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2></i>School Packages <i class="fa-solid fa-school"></i> </h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="#">
-                <h2>Sports Barn Hire <i class="fa-solid fa-futbol"></i> </h2>
-              </a>
-            </li>
-            <!--on site activities dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>On Site Activities <i class="fa-solid fa-person-running"></i></h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <div class="hNavItem">
-            <li class="nav-item col text-center">
-              <a class="nav-link active" aria-current="page" href="#">
-                <h2>Leaders Information <i class="fa-solid fa-book-open-reader"></i></h2>
-              </a>
-            </li>
-            <!--accomodation dropdown menu-->
-            <li class="nav-item dropdown col text-center">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <h2>Local Amenities <i class="fa-solid fa-person-swimming"></i> <i
-                    class="fa-solid fa-place-of-worship"></i> <i class="fa-solid fa-hospital"></i></h2>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          <li class="nav-item footerItem text-center">
-            <div className='copyright '>
-              <a href="https://www.bb-northwest.org.uk/centre/"
-                class="btn themebut animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
-                Now!!</a>
-            </div>
-          </li>
-
-
-
-
-  </nav>
-
-  <video autoPlay loop muted class="video">
-    <source src="../media/index/video/bbcentre.mp4" type='video/mp4' />
-  </video>
-  <!--map section-->
-
-  <div class="card m-auto mt-3 mb-3 mapCard" style="width: 40rem;">
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d303210.23954665184!2d-2.8693479308672005!3d53.578650606860684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x487a52c0dfd893c5%3A0x8b0b8247e5e4a5e0!2sManchester%20Airport%20(MAN)%2C%20Manchester!3m2!1d53.3553569!2d-2.2771619999999997!4m5!1s0x487b6bd925c5d7fd%3A0xa613257224aa887a!2sPR4%203SS%2C%20Preston!3m2!1d53.7865897!2d-2.8591007999999998!5e0!3m2!1sen!2suk!4v1744803044326!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="card-body text-center">
-        <div class="card-body text-center">
-        <p class="card-text text-center fI3">Route Via Manchester Airport To
-      <p class="fI3 text-center">The Boys' Brigade North West District Training and Activity Centre</p>
-      </p>
-      <div>
-        <a href="../pages/location.html" class="btn themebut cardbtn fI3" role="button" a>Go Back</a>
-      </div>
-      
-    </div>
-  </div> <!--footer section-->
-  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary static-bottom">
-    <div class="container-fluid">
-      <div class="m-auto">
-        <li class="nav-item footerItem  fI2">
-          <div class="googleTranslate " id="google_translate_element"></div>
-        </li>
-        <li class="nav-item footerItem fI2 ">
-          <button class="themebut" onclick="toggleMode()"> Change Colour Theme <i
-              class="fa-solid fa-palette"></i></button>
-        </li>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
-        <div class="m-auto">
-          <ul class="navbar-nav m-auto mb-5  ">
-            <li class="nav-item footerItem fI2 text-center">
-              <a
-                href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>
-                Registered Charity: 1097985</a>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="./">
-                  © 2025
-                  Copyright:</a>
-
-              </div>
-              <div><a href="./"> The Boys' Northwest Training and Activity Centre
-                </a></div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="tel:+4401772685000">
-                  <i class="fa-solid fa-phone"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="mailto:office@bb-northwest.org.uk">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
+  <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--link to bootstrap 5.3 css-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+      <!--Lonk to futura font-->
+      <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+    
+      <!--Link to animation text css - for central block-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <!--link to contact css file-->
+      <link rel="stylesheet" href="../css/contact.css">
+      <!--link to index css file-->
+      <link rel="stylesheet" href="../css/index.css">
+      <!--link to media enquires css file-->
+      <link rel="stylesheet" href="../css/mediaEnquires.css">
+      <title>Manchester Airport Directions</title>
+    </head>
+    
+    <body class="dark-theme">
+      <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+    
+          <img class="brandImg" src="../media/index/images/bb_logo_solid.png"
+            alt="Northwest Boys'Brigade Training and Activity Centre" height="80 rem">
+          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
               <div>
-                <a href="./pages/contact.html">
-                  <i class="fa-solid fa-address-card"></i>
-                </a>
+                <li class="nav-item col text-center">
+                  <a class="nav-link active " aria-current="page" href="../index.html">
+                    <h2><i class="fa-solid fa-house"></i></h2>
+                  </a>
+                </li>
+                <!--about us dropdown menu-->
+                <li class="nav-item  dropdown col text-center">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <h2>The Centre</h2>
+                  </a>
+                  <ul class="dropdown-menu text-center">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
               </div>
-            </li>
-            <li class="nav-item footerItem text-center fI2">
-              <div className='copyright'>
-
-                <a href="https://www.bb-northwest.org.uk/centre/"
-                  class="btn themebut animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
-                  Now!!</a>
+              <div class="hNavItem">
+                <li class="nav-item col text-center">
+                  <a class="nav-link active" aria-current="page" href="../pages/contact.html">
+                    <h2>Contact Us <i class="fa-solid fa-phone"></i> <i class="fa-solid fa-envelope"></i> <i
+                        class="fa-solid fa-address-card"></i> </h2>
+                  </a>
+                </li>
+                <!--accomodation dropdown menu-->
+                <li class="nav-item dropdown col text-center">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <h2>Residential Facilities <i class="fa-solid fa-bed"></i> <i class="fa-solid fa-tents"></i></h2>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
               </div>
-            </li>
+              <div class="hNavItem">
+                <li class="nav-item col text-center">
+                  <a class="nav-link active" aria-current="page" href="../pages/location.html">
+                    <h2>How To Find Us <i class="fa-solid fa-map-location-dot"></i> </h2>
+                  </a>
+                </li>
+                <!--school packages dropdown menu-->
+                <li class="nav-item dropdown col text-center">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <h2></i>School Packages <i class="fa-solid fa-school"></i> </h2>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </div>
+              <div class="hNavItem">
+                <li class="nav-item col text-center">
+                  <a class="nav-link active" aria-current="page" href="#">
+                    <h2>Sports Barn Hire <i class="fa-solid fa-futbol"></i> </h2>
+                  </a>
+                </li>
+                <!--on site activities dropdown menu-->
+                <li class="nav-item dropdown col text-center">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <h2>On Site Activities <i class="fa-solid fa-person-running"></i></h2>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </div>
+              <div class="hNavItem">
+                <li class="nav-item col text-center">
+                  <a class="nav-link active" aria-current="page" href="#">
+                    <h2>Leaders Information <i class="fa-solid fa-book-open-reader"></i></h2>
+                  </a>
+                </li>
+                <!--accomodation dropdown menu-->
+                <li class="nav-item dropdown col text-center">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <h2>Local Amenities <i class="fa-solid fa-person-swimming"></i> <i
+                        class="fa-solid fa-place-of-worship"></i> <i class="fa-solid fa-hospital"></i></h2>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </div>
+              <li class="nav-item footerItem text-center">
+                <div className='copyright '>
+                  <a href="https://www.bb-northwest.org.uk/centre/"
+                    class="btn themebut animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
+                    Now!!</a>
+                </div>
+              </li>
+    
+    
+    
+    
+      </nav>
+    
+      <video autoPlay loop muted class="video">
+        <source src="../media/index/video/bbcentre.mp4" type='video/mp4' />
+      </video>
+      <!--map section-->
+    
+      <div class="card m-auto mt-3 mb-3 mapCard" style="width: 40rem;">
+    
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d303210.23954665184!2d-2.8693479308672005!3d53.578650606860684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x487a52c0dfd893c5%3A0x8b0b8247e5e4a5e0!2sManchester%20Airport%20(MAN)%2C%20Manchester!3m2!1d53.3553569!2d-2.2771619999999997!4m5!1s0x487b6bd925c5d7fd%3A0xa613257224aa887a!2sPR4%203SS%2C%20Preston!3m2!1d53.7865897!2d-2.8591007999999998!5e0!3m2!1sen!2suk!4v1744803044326!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+  
+        <div class="card-body text-center">
+          <p class="card-text text-center fI3">Route Via Manchester Airport To
+          <p class="fI3 text-center">The Boys' Brigade North West District Training and Activity Centre</p>
+          </p>
+          <div>
+            <a href="../pages/location.html" class="btn themebut cardbtn fI3" role="button" a>Go Back</a>
+          </div>
+          
         </div>
-
+      </div> <!--footer section-->
+      <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary static-bottom">
+        <div class="container-fluid">
+          <div class="m-auto">
+            <li class="nav-item footerItem  fI2">
+              <div class="googleTranslate " id="google_translate_element"></div>
+            </li>
+            <li class="nav-item footerItem fI2 ">
+              <button class="themebut" onclick="toggleMode()"> Change Colour Theme <i
+                  class="fa-solid fa-palette"></i></button>
+            </li>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    
+            <div class="m-auto">
+              <ul class="navbar-nav m-auto mb-5  ">
+                <li class="nav-item footerItem fI2 text-center">
+                  <a
+                    href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>
+                    Registered Charity: 1097985</a>
+                </li>
+                <li class="nav-item footerItem fI2 text-center">
+                  <div className='copyright'>
+                    <a href="./">
+                      © 2025
+                      Copyright:</a>
+    
+                  </div>
+                  <div><a href="./"> The Boys' Northwest Training and Activity Centre
+                    </a></div>
+                </li>
+                <li class="nav-item footerItem fI2 text-center">
+                  <div className='copyright'>
+                    <a href="tel:+4401772685000">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item footerItem fI2 text-center">
+                  <div className='copyright'>
+                    <a href="mailto:office@bb-northwest.org.uk">
+                      <i class="fa-solid fa-envelope"></i>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item footerItem fI2 text-center">
+                  <div>
+                    <a href="./pages/contact.html">
+                      <i class="fa-solid fa-address-card"></i>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item footerItem text-center fI2">
+                  <div className='copyright'>
+    
+                    <a href="https://www.bb-northwest.org.uk/centre/"
+                      class="btn themebut animate__animated animate__flash animate__infinite	infinite" role="button" a>Book
+                      Now!!</a>
+                  </div>
+                </li>
+            </div>
+    
+          </div>
+      </nav>
+      <!-- Success Alert -->
+      <div class="alert popup popupSuccess fade show" style="display: none;" id="success">
+        <div class="mb-2 text-center">
+          <h1>Success!</h1>
+        </div>
+        <div class="mb-2 text-center">
+          <h2> Message Successfully Sent!! </h2>
+        </div>
+        <div class="mb-2 text-center">
+          <h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2>
+        </div>
+        <div class="mb-2 text-center">
+          <h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2>
+        </div>
       </div>
-  </nav>
-  <!-- Success Alert -->
-  <div class="alert popup popupSuccess fade show" style="display: none;" id="success">
-    <div class="mb-2 text-center">
-      <h1>Success!</h1>
-    </div>
-    <div class="mb-2 text-center">
-      <h2> Message Successfully Sent!! </h2>
-    </div>
-    <div class="mb-2 text-center">
-      <h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2>
-    </div>
-    <div class="mb-2 text-center">
-      <h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2>
-    </div>
-  </div>
-
-  <!-- Error Alert -->
-  <div class="alert popup popupError fade show" style="display: none;" id="error">
-    <div class="mb-2 text-center">
-      <h1>Error!</h1>
-    </div>
-    <div class="mb-2 text-center">
-      <h2> Message Failed To Send!! </h2>
-    </div>
-    <div class="mb-2 text-center">
-      <h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2>
-    </div>
-    <div class="mb-2 text-center">
-      <h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2>
-    </div>
-  </div>
-</body>
-<!--Link to index.js-->
-<script src="../javascript/index.js"></script>
-
-<!--link for bootstrap 5.3 javascript-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<!--link for fontawesome icons-->
-<script src="https://kit.fontawesome.com/b1c04ffae0.js" crossorigin="anonymous"></script>
-<!--javascript function for google translate-->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-  }
-</script>
-<!--script for google translate-->
-<script type="text/javascript"
-  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<!--link to server tonsend form email-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function () {
-    // https://dashboard.emailjs.com/admin/account
-    emailjs.init({
-      publicKey: "OwnMI8f5wR8R7WxAV",
-    });
-  })();
-</script>
-<script type="text/javascript">
-  window.onload = function () {
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      // these IDs from the previous steps
-      emailjs.sendForm('service_20i89wd', 'template_zrpcu9l', this)
-        .then(() => {
-          document.getElementById("success").style.display = "block";
-          document.getElementById("contact-form").reset();
-        }, (error) => {
-          document.getElementById("error").style.display = "block";
+    
+      <!-- Error Alert -->
+      <div class="alert popup popupError fade show" style="display: none;" id="error">
+        <div class="mb-2 text-center">
+          <h1>Error!</h1>
+        </div>
+        <div class="mb-2 text-center">
+          <h2> Message Failed To Send!! </h2>
+        </div>
+        <div class="mb-2 text-center">
+          <h2><a href="../index.html" class="alert-link">Click To Return To The Home Page</a></h2>
+        </div>
+        <div class="mb-2 text-center">
+          <h2> <button type="button" class="btn-close" data-bs-dismiss="alert"></button></h2>
+        </div>
+      </div>
+    </body>
+    <!--Link to index.js-->
+    <script src="../javascript/index.js"></script>
+    
+    <!--link for bootstrap 5.3 javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!--link for fontawesome icons-->
+    <script src="https://kit.fontawesome.com/b1c04ffae0.js" crossorigin="anonymous"></script>
+    <!--javascript function for google translate-->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+      }
+    </script>
+    <!--script for google translate-->
+    <script type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!--link to server tonsend form email-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "OwnMI8f5wR8R7WxAV",
         });
-    });
-  }
-</script>
-
-</html>
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_20i89wd', 'template_zrpcu9l', this)
+            .then(() => {
+              document.getElementById("success").style.display = "block";
+              document.getElementById("contact-form").reset();
+            }, (error) => {
+              document.getElementById("error").style.display = "block";
+            });
+        });
+      }
+    </script>
+    
+    </html>
