@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Neighborhood Discovery</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="../css/hospitals.css" rel="stylesheet">
-    <script>
-      const CONFIGURATION = {
-        "capabilities": {"search":true,"distances":true,"directions":true,"contacts":true,"atmospheres":true,"thumbnails":true},
-        "pois": [
-        {"placeId": "ChIJp8NiW6JDe0gRGHQylB2ZbYQ"},
-          {"placeId": "ChIJAZ055Z5De0gRN94_3vffaWg"},
-          {"placeId": "ChIJax6Lo45De0gRsJlwfoZEwkY"},
-          {"placeId": "ChIJB3qUGwNye0gRxqTH5trBdHg"},
-          {"placeId": "ChIJpV5CVqJDe0gR2VobCYv-I5Y"},
-          {"placeId": "ChIJ-6aCjtFre0gR7PHH3CbHvpQ"},
-          {"placeId": "ChIJe8l8j4Zpe0gRIYO-Nlk0KUM"},
-          {"placeId": "ChIJ8yjf0Cxqe0gR7YA92iy6OuU"},
-          {"placeId": "ChIJZcPD5tNre0gR2tM9RErtoOI"},
-          {"placeId": "ChIJ4Yp0ESpqe0gRh32DSkznQj0"},
-          {"placeId": "ChIJI61j0Sxqe0gRf_H-fzbFCnM"},
-          {"placeId": "ChIJEcxw_dNre0gRFraX9Xf2z7g"},
-          {"placeId": "ChIJkbNwzlZce0gRnR1AmRo98VA"},
-          {"placeId": "ChIJ1cK45VFce0gR7Sbg2nvyj7s"},
-          {"placeId": "ChIJ0R8R2llce0gRfU8uDLJVZRg"},
-        {"placeId": "ChIJ8cf98_ZDe0gRs9gR05FfGj0"},
-          {"placeId": "ChIJRev_YApEe0gRfs3FE8pRn5I"},
-          {"placeId": "ChIJK9HjPf9De0gRB5H7x396bF8"},
-        {"placeId": "ChIJUw7slStqe0gR8duQQvzv9Ik"},
-          
-          {"placeId": "ChIJLUL7LdNre0gR_apFoMhfAAw"},
-          
-          {"placeId": "ChIJLUL7LdNre0gRqvgfN1G-PPM"},
-            
-          {"placeId": "ChIJT-3pPllre0gRtpxEolU0hqE"},
-          {"placeId": "ChIJq6oJ0ixqe0gRX_svhlnJX40"},
-          
-          {"placeId": "ChIJfcyvoJ1De0gR9pEnBoxuNIo"},
-          {"placeId": "ChIJ4Tkv2QlEe0gRXrUZ0oHIWOU"},
-          {"placeId": "ChIJbQsF7qlGe0gR48JKnIlHfI0"},
-          {"placeId": "ChIJNRGnnvJDe0gR7_5DIRLULjo"},
-          
-          {"placeId": "ChIJj6UUYINEe0gRlTBytcNOtnA"},
-          {"placeId": "ChIJ7a8l2QlEe0gRLdfmBpoYOHY"},
-          {"placeId": "ChIJG8KX_HdDe0gRZjCtPJptncM"},
-          {"placeId": "ChIJ43f8pn1Ee0gRwXorxzhLy0E"},
-          {"placeId": "ChIJrWeZzOlDe0gRQXvdwLs0iSc"},
-          {"placeId": "ChIJq_MiPYxDe0gRqOJmJhl637c"},
-          {"placeId": "ChIJD_uCZndEe0gR4CUnjB3zi2c"}
-        ],
-        "mapRadius": 15000,
-        "mapOptions": {"center":{"lat":53.7965897,"lng":-2.9491008},"fullscreenControl":true,"mapTypeControl":true,"streetViewControl":true,"zoom":10,"zoomControl":true,"maxZoom":20,"mapId":""},
-        "mapsApiKey": "AIzaSyCFVgc8vqA4k030dFjOKHu0Hn8WIidoQGY"
-      };
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../css/attract.css" rel="stylesheet">
+    <!--link to bootstrap 5.3 css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-      function initMap() {
-        new NeighborhoodDiscovery(CONFIGURATION);
-      }
+    <!--Lonk to futura font-->
+    <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
+
+    <!--Link to animation text css - for central block-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--link to contact css file-->
+    <link rel="stylesheet" href="../css/contact.css">
+    <!--link to index css file-->
+    <link rel="stylesheet" href="../css/index.css">
+    <!--link to media enquires css file-->
+    <link rel="stylesheet" href="../css/mediaEnquires.css">
+    <script>
+
+        const CONFIGURATION = {
+            "capabilities": { "search": true, "distances": true, "directions": true, "contacts": true, "atmospheres": true, "thumbnails": true },
+            "pois": [
+                { "placeId": "ChIJp8NiW6JDe0gRGHQylB2ZbYQ" },
+                { "placeId": "ChIJAZ055Z5De0gRN94_3vffaWg" },
+                { "placeId": "ChIJax6Lo45De0gRsJlwfoZEwkY" },
+                { "placeId": "ChIJB3qUGwNye0gRxqTH5trBdHg" },
+                { "placeId": "ChIJpV5CVqJDe0gR2VobCYv-I5Y" },
+                { "placeId": "ChIJ-6aCjtFre0gR7PHH3CbHvpQ" },
+                { "placeId": "ChIJe8l8j4Zpe0gRIYO-Nlk0KUM" },
+                { "placeId": "ChIJ8yjf0Cxqe0gR7YA92iy6OuU" },
+                { "placeId": "ChIJZcPD5tNre0gR2tM9RErtoOI" },
+                { "placeId": "ChIJ4Yp0ESpqe0gRh32DSkznQj0" },
+                { "placeId": "ChIJI61j0Sxqe0gRf_H-fzbFCnM" },
+                { "placeId": "ChIJEcxw_dNre0gRFraX9Xf2z7g" },
+                { "placeId": "ChIJkbNwzlZce0gRnR1AmRo98VA" },
+                { "placeId": "ChIJ1cK45VFce0gR7Sbg2nvyj7s" },
+                { "placeId": "ChIJ0R8R2llce0gRfU8uDLJVZRg" },
+                { "placeId": "ChIJ8cf98_ZDe0gRs9gR05FfGj0" },
+                { "placeId": "ChIJRev_YApEe0gRfs3FE8pRn5I" },
+                { "placeId": "ChIJK9HjPf9De0gRB5H7x396bF8" },
+                { "placeId": "ChIJUw7slStqe0gR8duQQvzv9Ik" },
+
+                { "placeId": "ChIJLUL7LdNre0gR_apFoMhfAAw" },
+
+                { "placeId": "ChIJLUL7LdNre0gRqvgfN1G-PPM" },
+
+                { "placeId": "ChIJT-3pPllre0gRtpxEolU0hqE" },
+                { "placeId": "ChIJq6oJ0ixqe0gRX_svhlnJX40" },
+
+                { "placeId": "ChIJfcyvoJ1De0gR9pEnBoxuNIo" },
+                { "placeId": "ChIJ4Tkv2QlEe0gRXrUZ0oHIWOU" },
+                { "placeId": "ChIJbQsF7qlGe0gR48JKnIlHfI0" },
+                { "placeId": "ChIJNRGnnvJDe0gR7_5DIRLULjo" },
+
+                { "placeId": "ChIJj6UUYINEe0gRlTBytcNOtnA" },
+                { "placeId": "ChIJ7a8l2QlEe0gRLdfmBpoYOHY" },
+                { "placeId": "ChIJG8KX_HdDe0gRZjCtPJptncM" },
+                { "placeId": "ChIJ43f8pn1Ee0gRwXorxzhLy0E" },
+                { "placeId": "ChIJrWeZzOlDe0gRQXvdwLs0iSc" },
+                { "placeId": "ChIJq_MiPYxDe0gRqOJmJhl637c" },
+                { "placeId": "ChIJD_uCZndEe0gR4CUnjB3zi2c" }
+            ],
+            "mapRadius": 15000,
+            "mapOptions": { "center": { "lat": 53.7965897, "lng": -2.9491008 }, "fullscreenControl": true, "mapTypeControl": true, "streetViewControl": true, "zoom": 10, "zoomControl": true, "maxZoom": 20, "mapId": "" },
+            "mapsApiKey": "AIzaSyCFVgc8vqA4k030dFjOKHu0Hn8WIidoQGY"
+        };
+
+        function initMap() {
+            new NeighborhoodDiscovery(CONFIGURATION);
+        }
     </script>
     <script id="nd-place-results-tmpl" type="text/x-handlebars-template">
       {{#each places}}
@@ -206,45 +223,330 @@
         </div>
       {{/if}}
     </script>
-  </head>
-  <body>
-    <div class="neighborhood-discovery">
-      <div class="places-panel panel no-scroll">
-        <header class="navbar">
-          <div class="search-input">
-            <input class="place-search-input" placeholder="Search nearby places">
-            <button class="place-search-button">
-              <img src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="search"/>
-            </button>
-          </div>
-        </header>
-        <div class="results">
-          <ul class="place-results-list"></ul>
+</head>
+
+<body>
+
+    <body class="dark-theme">
+        <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+
+                <img class="brandImg" src="../media/index/images/bb_logo_solid.png"
+                    alt="Northwest Boys'Brigade Training and Activity Centre" height="80 rem">
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <div>
+                            <li class="nav-item col text-center">
+                                <a class="nav-link active " aria-current="page" href="../index.html">
+                                    <h2><i class="fa-solid fa-house"></i></h2>
+                                </a>
+                            </li>
+                            <!--about us dropdown menu-->
+                            <li class="nav-item  dropdown col text-center">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <h2>The Centre</h2>
+                                </a>
+                                <ul class="dropdown-menu text-center">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="hNavItem">
+                            <li class="nav-item col text-center">
+                                <a class="nav-link active" aria-current="page" href="../pages/contact.html">
+                                    <h2>Contact Us <i class="fa-solid fa-phone"></i> <i
+                                            class="fa-solid fa-envelope"></i> <i class="fa-solid fa-address-card"></i>
+                                    </h2>
+                                </a>
+                            </li>
+                            <!--accomodation dropdown menu-->
+                            <li class="nav-item dropdown col text-center">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <h2>Residential Facilities <i class="fa-solid fa-bed"></i> <i
+                                            class="fa-solid fa-tents"></i></h2>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="hNavItem">
+                            <li class="nav-item col text-center">
+                                <a class="nav-link active" aria-current="page" href="../pages/location.html">
+                                    <h2>How To Find Us <i class="fa-solid fa-map-location-dot"></i> </h2>
+                                </a>
+                            </li>
+                            <!--school packages dropdown menu-->
+                            <li class="nav-item dropdown col text-center">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <h2></i>School Packages <i class="fa-solid fa-school"></i> </h2>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="hNavItem">
+                            <li class="nav-item col text-center">
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    <h2>Sports Barn Hire <i class="fa-solid fa-futbol"></i> </h2>
+                                </a>
+                            </li>
+                            <!--on site activities dropdown menu-->
+                            <li class="nav-item dropdown col text-center">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <h2>On Site Activities <i class="fa-solid fa-person-running"></i></h2>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="hNavItem">
+                            <li class="nav-item col text-center">
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    <h2>Leaders Information <i class="fa-solid fa-book-open-reader"></i></h2>
+                                </a>
+                            </li>
+                            <!--accomodation dropdown menu-->
+                            <li class="nav-item dropdown col text-center">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <h2>Local Amenities <i class="fa-solid fa-person-swimming"></i> <i
+                                            class="fa-solid fa-church"></i> <i class="fa-solid fa-hospital"></i>
+                                    </h2>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../pages/hospitals.html" class="dropdown-item" href="#">Local Health
+                                            Care Facilities <i class="fa-solid fa-hospital"></i></a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a href="../pages/LocalChurches.html" class="dropdown-item" href="#">Local
+                                            Churches <i class="fa-solid fa-church"></i></a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <li class="nav-item footerItem text-center">
+                            <div className='copyright '>
+                                <a href="https://www.bb-northwest.org.uk/centre/"
+                                    class="btn themebut animate__animated animate__flash animate__infinite	infinite"
+                                    role="button" a>Book
+                                    Now!!</a>
+                            </div>
+                        </li>
+
+
+
+
+        </nav>
+
+        <!--video section-->
+        <video autoPlay loop muted class="video2">
+            <source src="../media/index/video/bbcentre.mp4" type='video/mp4' />
+        </video>
+        <!--map section-->
+        <div class="card m-auto mt-3 mb-3 mapCard2" style="width: 80%;">
+            <h5 class="card-title text-center mb-5 mt-5">LOCAL HEALTH FACILITIES</h5>
+            <div class="card-body m-auto">
+                <div class="d-flex justify-content-between mb-3">
+                    <h2 class="p-2">For All Emergency Services</h2>
+                    <h2 class="p-2">---</h2>
+                    <h2 class="p-2" >Please Dial 999 </h2>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <h2 class="p-2">For Medical and Local Health Services Information </h2>
+                    <h2 class="p-2">---</h2>
+                    <h2 class="p-2" >Please Dial 111 </h2>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <h2 class="p-2">For Reporting a Crime or Incident </h2>
+                    <h2 class="p-2">---</h2>
+                    <h2  class="p-2">Please Dial 101 </h2>
+                </div>
+
+               
+            </div>
+            <div class="neighborhood-discovery">
+                <div class="places-panel panel no-scroll">
+                    <header class="navbar">
+                        <div class="search-input">
+                            <input class="place-search-input" placeholder="Search nearby places">
+                            <button class="place-search-button">
+                                <img src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg"
+                                    alt="search" />
+                            </button>
+                        </div>
+                    </header>
+                    <div class="results">
+                        <ul class="place-results-list"></ul>
+                    </div>
+                    <button class="show-more-button themebut sticky">
+                        <span>Show More</span>
+                        <img class="right"
+                            src="https://fonts.gstatic.com/s/i/googlematerialicons/expand_more/v11/24px.svg"
+                            alt="expand" />
+                    </button>
+                </div>
+                <div class="details-panel panel"></div>
+                <div class="map"></div>
+                <div class="photo-modal">
+                    <img alt="place photo" />
+                    <div>
+                        <button class="back-button">
+                            <img class="icon"
+                                src="https://fonts.gstatic.com/s/i/googlematerialicons/arrow_back/v11/24px.svg"
+                                alt="back" />
+                        </button>
+                        <div class="photo-text">
+                            <div class="photo-place"></div>
+                            <div class="photo-attrs">Photo by <span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <svg class="marker-pin" xmlns="http://www.w3.org/2000/svg" width="26" height="38" fill="none">
+                    <path
+                        d="M13 0C5.817 0 0 5.93 0 13.267c0 7.862 5.59 10.81 9.555 17.624C12.09 35.248 11.342 38 13 38c1.723 0 .975-2.817 3.445-7.043C20.085 24.503 26 21.162 26 13.267 26 5.93 20.183 0 13 0Z" />
+                </svg>
+            </div>
+            <div class="card-body m-auto">
+                <p class="card-text text-center fI3">Local Health Care Facilities <i class="fa-solid fa-hospital"></i>
+                    To
+                <p class="fI3 text-center">The Boys' Brigade North West District Training and Activity Centre</p>
+                </p>
+            </div>
+            <div class="mt-5">
+                <a href="../pages/location.html" class="btn themebut cardbtn fI3" role="button" a>Go Back</a>
+            </div>
+
         </div>
-        <button class="show-more-button sticky">
-          <span>Show More</span>
-          <img class="right" src="https://fonts.gstatic.com/s/i/googlematerialicons/expand_more/v11/24px.svg" alt="expand"/>
-        </button>
-      </div>
-      <div class="details-panel panel"></div>
-      <div class="map"></div>
-      <div class="photo-modal">
-        <img alt="place photo"/>
-        <div>
-          <button class="back-button">
-            <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/arrow_back/v11/24px.svg" alt="back"/>
-          </button>
-          <div class="photo-text">
-            <div class="photo-place"></div>
-            <div class="photo-attrs">Photo by <span></span></div>
-          </div>
         </div>
-      </div>
-      <svg class="marker-pin" xmlns="http://www.w3.org/2000/svg" width="26" height="38" fill="none">
-        <path d="M13 0C5.817 0 0 5.93 0 13.267c0 7.862 5.59 10.81 9.555 17.624C12.09 35.248 11.342 38 13 38c1.723 0 .975-2.817 3.445-7.043C20.085 24.503 26 21.162 26 13.267 26 5.93 20.183 0 13 0Z"/>
-      </svg>
-    </div>
+        <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary static-bottom">
+            <div class="container-fluid">
+                <div class="m-auto">
+                    <li class="nav-item footerItem  fI2">
+                        <div class="googleTranslate " id="google_translate_element"></div>
+                    </li>
+                    <li class="nav-item footerItem fI2 ">
+                        <button class="themebut" onclick="toggleMode()"> Change Colour Theme <i
+                                class="fa-solid fa-palette"></i></button>
+                    </li>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                    <div class="m-auto">
+                        <ul class="navbar-nav m-auto mb-5  ">
+                            <li class="nav-item footerItem fI2 text-center">
+                                <a
+                                    href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>
+                                    Registered Charity: 1097985</a>
+                            </li>
+                            <li class="nav-item footerItem fI2 text-center">
+                                <div className='copyright'>
+                                    <a href="./">
+                                        © 2025
+                                        Copyright:</a>
+
+                                </div>
+                                <div><a href="./"> The Boys' Northwest Training and Activity Centre
+                                    </a></div>
+                            </li>
+                            <li class="nav-item footerItem fI2 text-center">
+                                <div className='copyright'>
+                                    <a href="tel:+4401772685000">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item footerItem fI2 text-center">
+                                <div className='copyright'>
+                                    <a href="mailto:office@bb-northwest.org.uk">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item footerItem fI2 text-center">
+                                <div>
+                                    <a href="./pages/contact.html">
+                                        <i class="fa-solid fa-address-card"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item footerItem text-center fI2">
+                                <div className='copyright'>
+
+                                    <a href="https://www.bb-northwest.org.uk/centre/"
+                                        class="btn themebut animate__animated animate__flash animate__infinite	infinite"
+                                        role="button" a>Book
+                                        Now!!</a>
+                                </div>
+                            </li>
+                    </div>
+
+                </div>
+        </nav>
+
+    </body>
+    <script src="../javascript/index.js"></script>
+
+    <!--link for bootstrap 5.3 javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!--link for fontawesome icons-->
+    <script src="https://kit.fontawesome.com/b1c04ffae0.js" crossorigin="anonymous"></script>
+    <!--javascript function for google translate-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <!--script for google translate-->
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="../javascript/hospitals.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVgc8vqA4k030dFjOKHu0Hn8WIidoQGY&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_neighborhooddiscovery_v3_cADEF" async defer></script>
-  </body>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFVgc8vqA4k030dFjOKHu0Hn8WIidoQGY&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_neighborhooddiscovery_v3_cADEF"
+        async defer></script>
+
 </html>

@@ -163,8 +163,9 @@ width: 100% !important;
  .mapCard2{
   background-color: var(---background) !important;
   color: var(---text);
-  height: 40rem !important;
+  height: 60rem !important;
   border-color: var(---background) !important;
+  box-shadow: 0 5px 30px var(---text) !important;
  }
  .mapA{
   margin-bottom: 2rem !important;

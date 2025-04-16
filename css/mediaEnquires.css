@@ -98,5 +98,14 @@
            /* Add other styles as needed, like reducing font size, etc. */
          }
        }
+       @media (max-width: 768px) {
+        .mapCard2{
+           /* Your mobile navbar styles here */
+           
+           height: 70rem !important;
+           
+           /* Add other styles as needed, like reducing font size, etc. */
+         }
+       }
          
          
