@@ -1,5 +1,7 @@
 
-  
+  body{
+    height: 80rem;
+  }
   .neighborhood-discovery {
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
