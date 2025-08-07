@@ -1,314 +1,267 @@
-/* font pairings
+:root {
+  --font-size-base: 100%;
+}
 
-font-family: futura 
-brand standards boys brigade
-*/
+/* Font Scaling */
+body {
+  font-size: var(--font-size-base);
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Futura Std', sans-serif;
+  height:175vh !important;
+}
 
-/*color pallette
-
-#D7F9FF cyan
-#AFCBFF jordy blue
-#0E1C36 oxford blue
-#F9FBF2 ivory
-#FFF7E0 yellow
-*/
-/*apply font - futura to all page*/
+/* Font face declarations */
 @font-face {
-  font-family: 'Futura'; /* Define your font family name */
-  src: url('../fonts/futura(1)/') format('woff2'), /* Path to your font file */
-      
+  font-family: 'Futura';
+  src: url('../fonts/futura(1)/') format('woff2');
 }
 @font-face {
   font-family: 'Microsoft Sans Serif Regular';
   font-style: normal;
   font-weight: normal;
   src: local('Microsoft Sans Serif Regular'), url('micross.woff') format('woff');
-  }
-  
-
-  @font-face {
+}
+@font-face {
   font-family: 'Microsoft Sans Serif';
   font-style: normal;
   font-weight: normal;
   src: local('Microsoft Sans Serif'), url('micross.woff') format('woff');
-  }
-/*text css for app*/
-* {
-  box-sizing: border-box;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
-
-h1 {
-  font-family: 'Futura ', sans-serif !important;
-    color: var(---text);
-    font-size: calc(12px + 1.1vw);
-    
-  }
-  h2{
-    font-family: 'Futura ', sans-serif !important;
-    color: var(---text);
-    font-size: calc(12px + 0.3vw) !important;
-
-  }
-  h3{
-    font-family: 'Futura ', sans-serif !important;
-    color: var(---text);
-    font-size: calc(12px + 0.2vw);
-
-  }
-  p{
-    font-family: 'Futura ', sans-serif !important;
-    color: var(---text);
-    font-size: calc(12px + 0.5vw) !important;
-
-  }
-  a {text-decoration: none !important;
-  color: var(---text);
-font-size: calc(12px+0.5vw) !important;
+/* Apply font scaling */
+h1, h2, h3, h4, h5, h6,
+p, a, li, span, label, input, button {
+  font-size: 1em;
 }
 
+/* Theme Definitions */
+.theme-light {
+  --bg-color: #F9FBF2;      /* Ivory */
+  --text-color: #0E1C36;    /* Oxford Blue */
+  --link-color: #0E1C36;
+  --navbar-bg: #FFF7E0;     /* Soft Yellow */
+}
 
-  /*css for header navbar*/
-  .headerBackground {
-    background: var(---background) !important;
-    }
-    .brandImg {
-      margin-left: 2rem !important;
-      margin-right: 2rem !important;
-    }
-    .hNavItem{
-      margin-left: calc(12px + 1vw) !important;
-    }
-    .dropdown{
-      margin-top: 1rem !important;
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    background-color: var(---text);
-    }
-   
+.theme-dark {
+  --bg-color: #0E1C36;      /* Oxford Blue */
+  --text-color: #AFCBFF;    /* Jordy Blue */
+  --link-color: #D7F9FF;    /* Cyan */
+  --navbar-bg: #1A2639;     /* Deep Navy */
+}
 
-/*accesibility css*/
+.theme-high-contrast {
+  --bg-color: #000000;
+  --text-color: #FFFFFF;
+  --link-color: #FFFF00;
+  --navbar-bg: #000000;
+}
 
-.dark-theme {
-  ---background: #0E1C36 ;
-  ---background-2:#F9FBF2;
-  ---card-border: #0b0e11;
-  ---text: #F9FBF2 ;
-  ---text-primary: #0E1C36;
+.theme-sepia {
+  --bg-color: #FFF7E0;      /* Yellow paper tone */
+  --text-color: #5B4636;
+  --link-color: #7B5E57;
+  --navbar-bg: #FAE3B4;
+}
 
- }
- .light-theme {
-   ---background: #AFCBFF    ;
-   ---background-2:#0E1C36;
-   ---card-border: #eaeaff;
-   ---text: #0E1C36 ;
-   ---text-primary: #F9FBF2 ;
-   
- }
- body {
-  font-size: 0.9rem;
-  font-family: "futura", sans-serif;
-  overflow-x: hidden;
-  background: var(---background);
-height: 30rem;
-width: 100% !important;
- }
+.theme-night {
+  --bg-color: #121212;      /* Jet Black */
+  --text-color: #D7F9FF;    /* Cyan */
+  --link-color: #00FFFF;    /* Bright Cyan */
+  --navbar-bg: #202020;     /* Charcoal */
+}
 
-   .themebut{
-    background-color: var(---background)!important;
-    color: var(---text)!important;
-    box-shadow: 0px 0px 2px 2px #AFCBFF;
-    width: fit-content!important;
-    scale: 1.2;}
-    .themebut:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    background-color: var(---background-2) !important; 
-    color: var(---text-primary)!important;
-    box-shadow: 0px 0px 2px 2px #AFCBFF;
-    width: fit-content!important;
-    scale: 1.2;}
-    
-    
-    
-    
-    
+/* Navbar */
+a, .nav-link {
+  color: var(--link-color) !important;
+  text-decoration: none !important;
+}
 
-   
-   .googleTranslate{
-    background-color: var(---background)!important;
-    color: var(---text)!important;
-    box-shadow: 0px 0px 2px 2px #AFCBFF;
-    width: fit-content!important;
-    margin-bottom: 1rem !important;
-    scale: 1.2;
-    
-   }
- /*map css*/
- .mapCard1{
-  background-color: var(---background) !important;
-  color: var(---text);
-  height: 35rem !important;
-  border-color: var(---background) !important;
- }
- .mapCard{
-  background-color: var(---background) !important;
-  color: var(---text);
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.navbar .navbar-collapse {
+  justify-content: center;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--link-color) !important;
+}
+
+/* Navbar Layout */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  margin: 0.5rem 1rem;
+}
+
+/* Theme Selector */
+#themeSelector {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Buttons & Accessibility */
+.themebut, .googleTranslate {
+  background-color: var(--bg-color) !important;
+  color: var(--link-color) !important;
+  box-shadow: 0px 0px 2px 2px #AFCBFF;
+  width: fit-content !important;
+  scale: 1.2;
+}
+
+.themebut:hover {
+  transform: translateY(-3px);
+  background-color: var(--navbar-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.accessibilitybut {
+  background-color: var(--bg-color) !important;
+  color: var(--link-color) !important;
+  box-shadow: 0px 0px 2px 2px #AFCBFF;
+  width: fit-content !important;
+  scale: 1;
+  position: fixed;
+  margin-left: 85%;
+  
+}
+
+.accessibilitybut:hover {
+  transform: translateY(-3px);
+  background-color: var(--navbar-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Map Cards */
+.mapCard, .mapCard1, .mapCard2 {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color);
+  border-color: var(--bg-color) !important;
+}
+
+.mapCard {
   height: 30rem !important;
-  border-color: var(---background) !important;
- }
- .mapCard2{
-  background-color: var(---background) !important;
-  color: var(---text);
+}
+.mapCard1 {
+  height: 35rem !important;
+}
+.mapCard2 {
   height: 60rem !important;
-  border-color: var(---background) !important;
-  box-shadow: 0 5px 30px var(---text) !important;
- }
- .mapA{
+  box-shadow: 0 5px 30px var(--text-color) !important;
+}
+.mapA {
   margin-bottom: 2rem !important;
- }
- /*media section*/
- video {
+}
+
+/* Video */
+video,
+video2 {
   max-width: 100%;
   object-fit: cover !important;
   position: fixed;
-   left: 0;
-   right: 0;
-    top: 0;
-    bottom: 0;
- z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+video2 {
+  opacity: 60%;
+}
 
-  
- }
- video2 {
-  max-width: 100%;
-  object-fit: cover !important;
-  position: fixed;
-   left: 0;
-   right: 0;
-    top: 0;
-    bottom: 0;
- z-index: -1;
- opacity: 60%;
-
-  
- }
- 
- /*footer section*/
- nav{
-
+/* Footer */
+nav {
   padding: 0;
-  opacity: 80%;
+  opacity: 50%;
   height: 10rem;
 }
-.spacerDiv {
- height: 5rem!important;
-}
-.spacerDiv2{
-height:10rem !important
-}
-
 nav:hover {
   opacity: 100% !important;
 }
- 
- .footerItem {
-  margin-right: 5vh !important;
-  margin-left: 5vh !important;
- }
- .fI2 {
-  margin-top: 1rem !important;
-  margin-bottom: 1.5rem !important;
- }
- .fI3 {
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
-  
- }
-.footerbtn {
-  background-color: var(---background-2) !important;
+.footerItem {
+  margin: 0 5vh !important;
 }
- 
+.fI2 {
+  margin: 1rem 0 1.5rem 0 !important;
+}
+.fI3 {
+  margin: 1rem 0 !important;
+}
+.footerbtn {
+  background-color: var(--text-color) !important;
+}
+.footerBackground
+{background: var(--bg-color) !important;
+  height: 40vh;}
+.cardBackground {
+  background: var(--bg-color) !important;
+  height: 55vh;
+}
 .footerBackground {
-  background: var(---background) !important;
-  height: 15vh;
   margin-top: 10vh !important;
 }
-
-.cardBackground{
-  background: var(---background) !important;
-  height: 15vh;
+.cardBackground {
   margin-bottom: 2vh !important;
-  
-  
+  opacity: 50%;
 }
-.cardbtn{
- max-width: 10rem !important;
+.cardBackground:hover {
+  opacity: 100% !important;
+    transform: scale(1.05); /* Example: Scale up on hover */
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+.cardbtn {
+  max-width: 10rem !important;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto !important;
   margin-bottom: 1rem !important;
-
+}
+.spacerDiv {
+  height: 5rem !important;
+}
+.spacerDiv2 {
+  height: 10rem !important;
 }
 
-
-
-/*central box section fade in*/
+/* Fade In */
 .fade-in-image {
-  animation:bg 15s linear infinite;
-  animation: fadeIn 20s;
-  -webkit-animation: fadeIn 20s;
-  -moz-animation: fadeIn 20s;
-  -o-animation: fadeIn 20s;
-  -ms-animation: fadeIn 20s;
- 
-}
-.cardHome {
- 
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  opacity: 80%;
-}
-.cardBtn{
-margin-top: auto !important;
-margin-bottom: 2rem !important;
-}
-.titleText {
-  margin-top: 2rem !important;
-}
-.typeText {
-  margin-top: 2rem !important;
+  animation: fadeIn 15s;
 }
 
-
-
+#fadeOutOnScroll {
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@-moz-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-ms-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }

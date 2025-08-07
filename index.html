@@ -4,38 +4,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--link to bootstrap 5.3 css-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <!--Lonk to futura font-->
   <link href="https://fonts.cdnfonts.com/css/futura-std-4" rel="stylesheet">
-
-  <!--Link to animation text css - for central block-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <!--link to index css file-->
   <link rel="stylesheet" href="./css/index.css">
-  
-  <!--link to media enquires css file-->
   <link rel="stylesheet" href="./css/mediaEnquires.css">
-  <title>Home Page</title>
+  <title>Boys' Brigade North West Training and Activity Centre Website</title>
+  <style>
+    .theme-preview {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+
+    .preview-light {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+    }
+
+    .preview-dark {
+      background-color: #343a40;
+    }
+
+    .preview-high-contrast {
+      background-color: #000000;
+      border: 1px solid #fff;
+    }
+
+    .preview-sepia {
+      background-color: #f4ecd8;
+    }
+
+    .preview-night {
+      background-color: #2c3e50;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 
-<body class="dark-theme">
-  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary">
+<body class="theme-light">
+  <span class="sr-only" role="status" aria-live="polite" id="screenReaderOutput">Welcome to the Boys' Brigade North West
+    Training and Activity Centre Website</span>
+
+
+  <video autoplay loop muted class="video w-100">
+    <source src="media/index/video/bbcentre.mp4" type='video/mp4' />
+  </video>
+  <div class="dropdown mb-3">
+    <button class="btn accessibilitybut dropdown-toggle" type="button" id="accessibilityDropdown"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <h2>Accessibility Options</h2>
+    </button>
+    <ul class="dropdown-menu text-center" aria-labelledby="accessibilityDropdown">
+      <li class="px-3 py-2">
+        <label for="themeSelector" class="form-label fw-bold">Choose Theme:</label>
+        <select id="themeSelector" class="form-select" onchange="changeTheme(this.value)">
+          <option value="theme-light"><span class="theme-preview preview-light"></span>🌞 Light</option>
+          <option value="theme-dark"><span class="theme-preview preview-dark"></span>🌙 Dark</option>
+          <option value="theme-high-contrast"><span class="theme-preview preview-high-contrast"></span>⚫ High Contrast
+          </option>
+          <option value="theme-sepia"><span class="theme-preview preview-sepia"></span>📜 Sepia</option>
+          <option value="theme-night"><span class="theme-preview preview-night"></span>🌌 Night</option>
+        </select>
+      </li>
+      <li class="px-3 py-2">
+        <div id="google_translate_element"></div>
+      </li>
+      <li class="px-3 py-2">
+        <label for="fontSizeSlider" class="form-label fw-bold">Adjust Font Size:</label>
+        <input type="range" class="form-range" min="14" max="24" step="1" id="fontSizeSlider"
+          onchange="adjustFontSize(this.value)">
+      </li>
+      <li class="px-3 py-2">
+        <button id="audioButton" aria-label="Read this page aloud" role="button" tabindex="0" aria-pressed="false">
+          🔊 Read Page
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="spacerDiv"></div>
+  <div class="fade-on-scroll fade-in-image" style="margin-bottom: 25vh;">
+    <div class="card cardHome cardBackground  mx-auto text-center" style="width: 90%; max-width: 600px;">
+      <div class="card-body">
+        <div>
+          <a href="https://www.bb-northwest.org.uk/centre/"
+            class="btn themebut  animate__animated animate__flash animate__infinite infinite mb-3" role="button">Book
+            Now!!</a>
+        </div>
+        <a class="mb-2">FOR:</a>
+
+        <h2 class="typeText">
+          <a id="text" href="#" class="typewrite" data-period="2000"
+            data-type='[ "Boys Brigade Events", "Group Residential Stays", "Group Camping Stays", "School Residentials", "School Activity Days", "Sports Hall Hire", "Training Facilities", "Conference Rooms", "Church Retreats", "Youth Organisations", "And much more..." ]'>
+            <span class="wrap"></span>
+          </a>
+        </h2>
+
+        <div style="margin-bottom: 1rem;">
+          <a>At:</a>
+        </div>
+
+        <div class="mb-3"> <img class="brandImg" src="./media/index/images/bb_logo_solid.png"
+            alt="Northwest Boys'Brigade Training and Activity Centre" height="140rem"></div>
+
+        <div>
+          <a href="https://www.bb-northwest.org.uk/centre/"
+            class="btn themebut mt-3 animate__animated animate__flash animate__infinite infinite mb-3"
+            role="button">Check Availability!!</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary fixed-bottom">
     <div class="container-fluid">
 
-      <img class="brandImg" src="./media/index/images/bb_logo_solid.png"
-        alt="Northwest Boys'Brigade Training and Activity Centre" height="80 rem">
+
       <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse dropup" id="navbarSupportedContent">
 
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <div >
+          <div>
             <li class="nav-item col text-center">
               <a class="nav-link active " aria-current="page" href="./index.html">
                 <h2><i class="fa-solid fa-house"></i></h2>
@@ -60,7 +170,7 @@
           <div class="hNavItem">
             <li class="nav-item col text-center">
               <a class="nav-link active" aria-current="page" href="./pages/contact.html">
-                <h2 >Contact Us <i class="fa-solid fa-phone"></i> <i class="fa-solid fa-envelope"></i> <i
+                <h2>Contact Us <i class="fa-solid fa-phone"></i> <i class="fa-solid fa-envelope"></i> <i
                     class="fa-solid fa-address-card"></i> </h2>
               </a>
             </li>
@@ -134,15 +244,17 @@
             <li class="nav-item dropdown col text-center">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                <h2>Local Amenities <i class="fa-solid fa-person-swimming"></i> <i class="fa-solid fa-church"></i>"></i> <i class="fa-solid fa-hospital"></i></h2>
+                <h2>Local Amenities <i class="fa-solid fa-person-swimming"></i> <i class="fa-solid fa-church"></i>"></i>
+                  <i class="fa-solid fa-hospital"></i></h2>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="./pages/hospitals.html" class="dropdown-item" href="#">Local Health
-                  Care Facilities <i class="fa-solid fa-hospital"></i></a></li>
-          <li>
-              <hr class="dropdown-divider">
-          </li>
-                <li><a href="./pages/LocalChurches.html" class="dropdown-item" href="#">Local Churches <i class="fa-solid fa-church"></i></a></li>
+                    Care Facilities <i class="fa-solid fa-hospital"></i></a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a href="./pages/LocalChurches.html" class="dropdown-item" href="#">Local Churches <i
+                      class="fa-solid fa-church"></i></a></li>
                 <li>
 
                   <hr class="dropdown-divider">
@@ -156,129 +268,99 @@
             </li>
           </div>
           <li class="nav-item footerItem text-center">
-            <div className='copyright '>
-               <a href="https://www.bb-northwest.org.uk/centre/" class="btn themebut animate__animated animate__flash animate__infinite	infinite" role="button" a>Check Availability!!</a>
-           </div>
-          </li>
+      </div>
+      </li>
 
 
 
 
   </nav>
-  <!--media section-->
-  <video autoPlay loop muted class="video">
-    <source src="media/index/video/bbcentre.mp4" type='video/mp4' />
-  </video>
-  <div class="spacerDiv">
 
-  </div>
-  <!--central section-->
-  <div class="card cardHome cardBackground fade-in-image" style="width: 20rem;height: 15rem; ">
-    <div class="card-body">
-      <div  class="card-title titleText">
-       
-        <h1  class="text-center">BOOK NOW!! FOR:</h1>
+  <div class="spacerDiv"></div>
+  <div class="fade-on-scroll">
+    <div class="card cardHome footerBackground  mx-auto text-center" style="width: 90%; max-width: 600px;">
+      <div class="card-body">
+        <footer class="text-center py-4">
+
+
+          <div class="mt-3">
+            <p><a
+                href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>Registered
+                Charity: 1097985</a></p>
+            <a>© 2025 The Boys' Northwest Training and Activity Centre</a>
+            <p>
+              <a href="tel:+4401772685000"><i class="fa-solid fa-phone" style="margin: 2rem;"></i></a>
+              <a href="mailto:office@bb-northwest.org.uk" style="margin: 2rem" ;><i
+                  class="fa-solid fa-envelope"></i></a>
+              <a href="./pages/contact.html" style="margin: 2rem" ;><i class="fa-solid fa-address-card"></i></a>
+            </p>
+            <a href="https://www.bb-northwest.org.uk/centre/"
+              class="btn themebut animate__animated animate__flash animate__infinite infinite" role="button">Book
+              Now!!</a>
+          </div>
+        </footer>
       </div>
-      <div>
-        <h2  class="text-center typeText">
-          <a id="text" href="" class="typewrite " data-period="2000"
-            data-type='[ "Boys Brigade Events,", "Group Residential Stays,", "Group Camping Stays", "School Residentials,","School Activity Days","Sports Hall Hire,", "Training Facilities,","Conference Rooms,","Church Retreats", "Youth Organisations,", "And much much more...." ]'>
-            <span class="wrap"></span>
-          </a>
-        </h2>
-      </div>
-      <div>
-        <a href="https://www.bb-northwest.org.uk/centre/" class="btn themebut cardbtn animate__animated animate__flash animate__infinite	infinite" role="button" a>Check
-          Availability Now!!</a>
-      </div>
-    
     </div>
   </div>
-  <div class="spacerDiv">
+  <script src="./javascript/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b1c04ffae0.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
 
-  </div>
+    function changeTheme(themeName) {
+      document.body.className = themeName;
+      document.getElementById("screenReaderOutput").textContent = `Theme changed to ${themeName.replace("theme-", "").replace("-", " ")}`;
+    }
 
-  <!--footer section-->
-  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary static-bottom">
-    <div class="container-fluid">
-      <div class="m-auto">
-        <li class="nav-item footerItem  fI2">
-          <div class="googleTranslate " id="google_translate_element"></div>
-        </li>
-        <li class="nav-item footerItem fI2 ">
-          <button class="themebut" onclick="toggleMode()"> Change Colour Theme <i
-              class="fa-solid fa-palette"></i></button>
-        </li>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    function adjustFontSize(size) {
+      document.body.style.fontSize = size + 'px';
+      document.getElementById("screenReaderOutput").textContent = `Font size adjusted to ${size} pixels`;
+    }
 
 
-        <div class="m-auto">
-          <ul class="navbar-nav m-auto mb-5  ">
-            <li class="nav-item footerItem fI2 text-center">
-              <a
-                href='https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3998718/what-who-how-where'>
-                Registered Charity: 1097985</a>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="./">
-                  © 2025
-                  Copyright:</a>
+    const audioButton = document.getElementById('audioButton');
+    let isReading = false;
+    let synth = window.speechSynthesis;
+    let utterance = null;
 
-              </div>
-              <div><a href="./"> The Boys' Northwest Training and Activity Centre
-                </a></div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="tel:+4401772685000">
-                  <i class="fa-solid fa-phone"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div className='copyright'>
-                <a href="mailto:office@bb-northwest.org.uk">
-                  <i class="fa-solid fa-envelope"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem fI2 text-center">
-              <div>
-                <a href="./pages/contact.html">
-                  <i class="fa-solid fa-address-card"></i>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item footerItem text-center fI2">
-              <div className='copyright'>
-                <a href="https://www.bb-northwest.org.uk/centre/" class="btn themebut  animate__animated animate__flash animate__infinite	infinite" role="button" a>Book Now!!</a>
-              </div>
-            </li>
-          
-        </div>
+    function readPageText() {
+      if (synth.speaking) synth.cancel();
+      const text = document.body.innerText;
+      utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US'; // change if needed
+      synth.speak(utterance);
+    }
 
-      </div>
-  </nav>
+    function stopReading() {
+      if (synth.speaking) synth.cancel();
+    }
+
+    audioButton.addEventListener('click', () => {
+      if (!isReading) {
+        readPageText();
+        audioButton.setAttribute('aria-pressed', 'true');
+      } else {
+        stopReading();
+        audioButton.setAttribute('aria-pressed', 'false');
+      }
+      isReading = !isReading;
+    });
+
+    // Optional: allow space/enter key to trigger
+    audioButton.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        audioButton.click();
+      }
+    });
+  </script>
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
-
-<!--Link to index.js-->
-<script src="./javascript/index.js"></script>
-<!--link for bootstrap 5.3 javascript-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<!--link for fontawesome icons-->
-<script src="https://kit.fontawesome.com/b1c04ffae0.js" crossorigin="anonymous"></script>
-<!--javascript function for google translate-->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-  }
-</script>
-<!--script for google translate-->
-<script type="text/javascript"
-  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </html>
