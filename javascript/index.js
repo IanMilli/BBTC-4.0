@@ -1,7 +1,8 @@
 // Load saved theme from localStorage
 window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme") || "theme-light";
-  document.body.className = savedTheme;
+  const savedTheme = localStorage.getItem("theme") || "theme-dark";
+  document.body.classList.add(savedTheme);
+
   const themeSelector = document.getElementById("themeSelector");
   if (themeSelector) {
     themeSelector.value = savedTheme;
@@ -10,7 +11,25 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Handle theme change from selector
 function selectTheme(theme) {
-  document.body.className = theme;
+  document.body.classList.remove(
+    "theme-light",
+    "theme-dark",
+    "theme-high-contrast",
+    "theme-sepia",
+    "theme-night"
+  );
+  document.body.classList.add(theme);
+  localStorage.setItem("theme", theme);
+}
+function selectTheme(theme) {
+  document.body.classList.remove(
+    "theme-light",
+    "theme-dark",
+    "theme-high-contrast",
+    "theme-sepia",
+    "theme-night"
+  );
+  document.body.classList.add(theme);
   localStorage.setItem("theme", theme);
 }
 
@@ -75,18 +94,22 @@ window.onload = function () {
 // Set animation duration globally
 document.documentElement.style.setProperty('--animate-duration', '7s');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    } else {
-      entry.target.classList.remove("visible");
-    }
-  });
-}, {
-  threshold: 0.1 // Adjust for how much needs to be visible before it fades in
-});
+document.addEventListener('DOMContentLoaded', function () {
+  const faders = document.querySelectorAll('.fade-section');
 
-document.querySelectorAll('.fade-on-scroll').forEach(el => {
-  observer.observe(el);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); // Fade in
+      } else {
+        entry.target.classList.remove('visible'); // Fade out
+      }
+    });
+  }, {
+    threshold: 0.1 // Adjust as needed
+  });
+
+  faders.forEach(fadeSection => {
+    observer.observe(fadeSection);
+  });
 });
