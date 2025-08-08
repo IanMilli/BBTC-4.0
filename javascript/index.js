@@ -167,7 +167,8 @@ function applyDefaultFontSizeForScreen() {
 
 // Run on page load
 document.addEventListener("DOMContentLoaded", function () {
-  applyDefaultFontSizeForScreen();
+  adjustFontSize();
+    slider.value = 7;
 
   // Live update when slider changes
   document.getElementById("fontSizeSlider").addEventListener("input", function () {
