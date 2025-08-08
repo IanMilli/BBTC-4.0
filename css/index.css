@@ -2,6 +2,8 @@
   --font-size-base: 100%;
 }
 
+
+
 /* Font Scaling */
 body {
   font-size: var(--font-size-base);
@@ -9,31 +11,24 @@ body {
   color: var(--text-color) !important;
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Futura Std', sans-serif;
-  height:175vh !important;
+  height:200vh !important;
+  padding-top: 70px; /* adjust to navbar height */
 }
 
-/* Font face declarations */
-@font-face {
-  font-family: 'Futura';
-  src: url('../fonts/futura(1)/') format('woff2');
-}
-@font-face {
-  font-family: 'Microsoft Sans Serif Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Microsoft Sans Serif Regular'), url('micross.woff') format('woff');
-}
-@font-face {
-  font-family: 'Microsoft Sans Serif';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Microsoft Sans Serif'), url('micross.woff') format('woff');
-}
+
 
 /* Apply font scaling */
 h1, h2, h3, h4, h5, h6,
 p, a, li, span, label, input, button {
-  font-size: 1em;
+  font-size: 1em !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Serif 4', serif;
+}
+
+body, p, li, span, label, input, button, a {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Theme Definitions */
@@ -85,6 +80,13 @@ a, .nav-link {
   align-items: center;
   flex-wrap: wrap;
   padding: 1rem 0;
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030; /* standard Bootstrap z-index for navbars */
+}
 }
 
 .navbar .navbar-collapse {
@@ -95,6 +97,9 @@ a, .nav-link {
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
   color: var(--link-color) !important;
+}
+.brandImg{
+  max-height: 7rem !important;
 }
 
 /* Navbar Layout */
@@ -138,11 +143,22 @@ a, .nav-link {
   background-color: var(--bg-color) !important;
   color: var(--link-color) !important;
   box-shadow: 0px 0px 2px 2px #AFCBFF;
-  width: fit-content !important;
+  width: 14rem !important;
   scale: 1;
   position: fixed;
-  margin-left: 85%;
-  
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .accessibilitybut {
+    width: 10rem !important;
+    top: 1rem;
+    right: 1rem;
+    
+  }
 }
 
 .accessibilitybut:hover {
@@ -151,6 +167,51 @@ a, .nav-link {
   color: var(--text-color) !important;
 }
 
+
+.accessibilityDropdown {
+  width: 14rem !important;
+}
+
+/*googleTranslate*/
+/* Target the container */
+#google_translate_element {
+  width: 100%;
+  max-width: 14rem;
+  margin: 1rem auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Target the internal translate dropdown */
+.goog-te-combo {
+  width: 100% !important;
+  max-width: 100%;
+  font-size: 1rem;
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+
+/* Optional: remove widget background and borders for cleaner integration */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Hide the weird top bar that Google adds on translation */
+body > .goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .accessibilityDropdown {
+    width: 10rem !important;
+  }
+}
 /* Map Cards */
 .mapCard, .mapCard1, .mapCard2 {
   background-color: var(--bg-color) !important;
@@ -214,14 +275,20 @@ nav:hover {
   height: 40vh;}
 .cardBackground {
   background: var(--bg-color) !important;
-  height: 55vh;
+  height: 50vh;
 }
 .footerBackground {
   margin-top: 10vh !important;
 }
-.cardBackground {
+.cardBackground, .footerBackground{
   margin-bottom: 2vh !important;
-  opacity: 50%;
+  opacity: 75%;
+}
+
+.footerBackground:hover {
+  opacity: 100% !important;
+    transform: scale(1.05); /* Example: Scale up on hover */
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
 }
 .cardBackground:hover {
   opacity: 100% !important;
@@ -245,23 +312,210 @@ nav:hover {
 }
 
 /* Fade In */
-.fade-in-image {
-  animation: fadeIn 15s;
+.fade-in {
+  opacity: 0;
+  transition: opacity 7s ease-in-out !important;
 }
 
-#fadeOutOnScroll {
-  transition: opacity 0.5s ease-out;
+/* This class triggers the fade-in effect */
+.fade-in.visible {
   opacity: 1;
 }
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar-nav {
     flex-direction: column;
     align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .cardHome {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+   
+    text-align: center;
+  }
+
+  .navbar h2 {
+    font-size: 1.25rem;
+  }
+
+  .themebut {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .cardHome h2,
+  .cardHome a {
+    font-size: 1em;
+  }
+}
+.navbar-nav {
+  flex-wrap: wrap !important;
+}
+
+.dropdown-menu {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--text-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  z-index: 9999;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  color: var(--text-color) !important;
+  background-color: transparent !important;
+  font-family: 'Futura', sans-serif;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: normal; /* allows wrapping on small screens */
+}
+
+/* Hover & active states */
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active {
+  background-color: var(--text-color) !important;
+  color: var(--bg-color) !important;
+}
+
+/* Align dropdown menu properly in nav */
+.navbar-nav .dropdown-menu {
+  position: absolute;
+}
+
+/* Ensure dropdown stays within screen bounds on mobile */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    float: none;
+    width: 10rem !important;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    background-color: var(--navbar-bg) !important;
+    opacity: 1 !important;
+  }
+
+  .navbar {
+    opacity: 0.9; /* default slightly transparent */
+    transition: opacity 0.3s ease;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--navbar-bg);
+    opacity: 1 !important;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+}
+
+.dropdown-menu,
+.dropdown-item,
+select,
+option {
+  font-size: inherit !important;
+}
+
+  .navbar-toggler-icon {
+  
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+}
+.navbar .nav-link,
+.navbar-brand,
+.navbar .dropdown-toggle {
+  font-size: 1em !important;  /* Or adjust as needed */
+}
+
+@media (max-width: 768px) {
+.navbar .nav-link,h1,h2,h3,h4,h5,p,a,Button{
+  font-size: 1em !important;
+}
+}
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--text-color); /* Use theme text color */
+  transition: 0.3s;
+}
+
+.navbar-toggler-icon div {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler-icon::before {
+  top: 0;
+}
+
+.navbar-toggler-icon::after {
+  bottom: 0;
+}
+
+
+html {
+  -webkit-text-size-adjust: none !important; /* Stops Safari and Chrome mobile from enlarging */
+}
+
+/* Unified mobile override for card and footer backgrounds */
+@media (max-width: 768px) {
+  .cardBackground {
+    min-height: 25rem !important;
+  }
+
+  .footerBackground {
+    min-height: 17rem !important;
   }
 }
