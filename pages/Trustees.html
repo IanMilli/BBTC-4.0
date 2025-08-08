@@ -62,183 +62,12 @@
 </head>
 
 <body >
-  <span class="sr-only" role="status" aria-live="assertive" id="screenReaderOutput">Welcome to the Boys' Brigade North West
-    Training and Activity Centre Website</span>
-
-
-  <video autoplay loop muted playsinline class="video w-100" style="max-height: 100vh; object-fit: cover;">
-    <source src="media/index/video/bbcentre.mp4" type='video/mp4' />
-  </video>
-  <div class="dropdown mb-3">
-    <button class="btn accessibilitybut dropdown-toggle" type="button" id="accessibilityDropdown"
-      data-bs-toggle="dropdown" aria-expanded="false">
-      <h2>Accessibility Options</h2>
-    </button>
-    <ul class="dropdown-menu text-center accessibilityDropdown" aria-labelledby="accessibilityDropdown">
-      <li class="px-3 py-2">
-        <label for="themeSelector" class="form-label fw-bold">Choose Theme:</label>
-        <select id="themeSelector" class="form-select" onchange="changeTheme(this.value)">
-          <option value="theme-light"><span class="theme-preview preview-light"></span>🌞 Light</option>
-          <option value="theme-dark"><span class="theme-preview preview-dark"></span>🌙 Dark</option>
-          <option value="theme-high-contrast"><span class="theme-preview preview-high-contrast"></span>⚫ High Contrast
-          </option>
-          <option value="theme-sepia"><span class="theme-preview preview-sepia"></span>📜 Sepia</option>
-          <option value="theme-night"><span class="theme-preview preview-night"></span>🌌 Night</option>
-        </select>
-      </li>
-      <li class="px-3 py-2 " >
-        <div id="google_translate_element"></div>
-      </li>
-      <li class="px-3 py-2">
-        <label for="fontSizeSlider" class="form-label fw-bold">Adjust Font Size:</label>
-        <input type="range" class="form-range" min="14" max="24" step="1" id="fontSizeSlider"
-          onchange="adjustFontSize(this.value)">
-      </li>
-      <li class="px-3 py-2">
-        <button id="audioButton" aria-label="Read this page aloud" role="button" tabindex="0" aria-pressed="false">
-          🔊 Read Page
-        </button>
-      </li>
-    </ul>
-  </div>
-
- <section class="py-5 ">
-    <div class="container  ">
-        <!-- Section Header -->
-        <div class="row text-center mb-5">
-            <div class="col-12">
-                <h1 class="section-title mt-5">Meet Our Trustees</h2>
-                <h2> The Boys' Brigade Training and Activity Centre Trustees are</h2>
-                <p>dedicated professional volunteers working together to achieve excellence</p>
-            </div>
-        </div>
-
-        <!-- Team Members -->
-        <div class="row g-4">
-            <!-- Team Member 1 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    <img src="../media/team/istockphoto-1060213698-612x612.jpg" alt="District President" class="mb-4 shadow">
-                    <h2 class="mb-1">Alan Mcloughlin</h5>
-                    <p class=" mb-3">District President</p>
-                    <p class="small mb-3">Leading our charities's vision and strategy for over 30 years.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 2 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    <img src="../media/team/istockphoto-1498876501-612x612.jpg" alt="District Secretary" class="mb-4 shadow">
-                    <h2 class="mb-1">Michael Southern</h5>
-                    <p class=" mb-3">District Secretary</p>
-                    <p class="small mb-3">Ensures the smooth running of the charities administration</p>
-                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    <img src="../media/team/istockphoto-598816894-612x612.jpg" alt="District Treasurer" class="mb-4 shadow">
-                    <h2 class="mb-1">Position Vacant</h5>
-                    <p class=" mb-3">District Treasurer</p>
-                    <p class="small mb-3">Manages the finacial stratergy of our charitiy</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 4 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    <img src="../media/team/istockphoto-1188176661-612x612.jpg" alt="Centre Trustee" class="mb-4 shadow">
-                    <h3 class="mb-1">Margaret Heywood</h5>
-                    <p class=" mb-3">Centre Trustee</p>
-                    <p class="small mb-3">Ensures the day to day smooth running of our charity </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--row 2-->
-<section class="py-5">
-    <div class="container">
-   
-
-        <!-- Team Members -->
-        <div class="row g-4">
-            <!-- Team Member 1 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    <img src="../media/team/man-s-shadow-on-textured-asphalt-background-free-photo.jpg" alt="Centre Trustee" class="mb-4 shadow">
-                    <h2 class="mb-1">RCW Henderson</h5>
-                    <p class=" mb-3">Centre Trustee</p>
-                    <p class="small mb-3">Managing our charities IT and Health and Safety strategy </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 2 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    <img src="../media/team/ron.jpg" alt="District Secretary" class="mb-4 shadow">
-                    <h2 class="mb-1">Ron Reid</h5>
-                    <p class=" mb-3">Centre Trustee</p>
-                    <p class="small mb-3">Focuses on long term stratergy planning For The Charity</p>
-                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    <img src="../media/team/carl.jpg" alt="Centre Trustees" class="mb-4 shadow">
-                    <h2 class="mb-1">Carl Fairclough</h5>
-                    <p class=" mb-3">Centre Trustee</p>
-                    <p class="small mb-3">Manages the Human Resources element of our charity</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 4 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="team-member text-center p-4">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-  <nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary fixed-top">
+  <Main>
+  <a href="#page-start" class="skip-link">Welcome to the Boys' Brigade North West
+    Training and Activity Centre Website</a>
+  </Main>
+ 
+<nav class="navbar headerBackground mainNavBar navbar-expand-lg bg-body-tertiary ">
     <div class="container-fluid">
 
 
@@ -381,6 +210,180 @@
 
   </nav>
 
+  <video autoplay loop muted playsinline class="video w-100" style="max-height: 100vh; object-fit: cover;">
+    <source src="media/index/video/bbcentre.mp4" type='video/mp4' />
+  </video>
+  <div class="dropdown mb-3">
+    <button class="btn accessibilitybut dropdown-toggle" type="button" id="accessibilityDropdown"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <h2>Accessibility Options</h2>
+    </button>
+    <ul class="dropdown-menu text-center accessibilityDropdown" aria-labelledby="accessibilityDropdown">
+      <li class="px-3 py-2">
+        <label for="themeSelector" class="form-label fw-bold">Choose Theme:</label>
+        <select id="themeSelector" class="form-select" onchange="changeTheme(this.value)">
+          <option value="theme-light"><span class="theme-preview preview-light"></span>🌞 Light</option>
+          <option value="theme-dark"><span class="theme-preview preview-dark"></span>🌙 Dark</option>
+          <option value="theme-high-contrast"><span class="theme-preview preview-high-contrast"></span>⚫ High Contrast
+          </option>
+          <option value="theme-sepia"><span class="theme-preview preview-sepia"></span>📜 Sepia</option>
+          <option value="theme-night"><span class="theme-preview preview-night"></span>🌌 Night</option>
+        </select>
+      </li>
+      <li class="px-3 py-2 " >
+        <div id="google_translate_element"></div>
+      </li>
+      <li class="px-3 py-2">
+        <label for="fontSizeSlider" class="form-label fw-bold">Adjust Font Size:</label>
+        <input type="range" class="form-range" min="14" max="24" step="1" id="fontSizeSlider"
+          onchange="adjustFontSize(this.value)">
+      </li>
+      <li class="px-3 py-2">
+        <button id="audioButton" aria-label="Read this page aloud" role="button" tabindex="0" aria-pressed="false">
+          🔊 Read Page
+        </button>
+      </li>
+    </ul>
+  </div>
+
+ <section class="py-5 ">
+    <div class="container  ">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h1 class="section-title mt-5">Meet Our Trustees</h2>
+                <h2> The Boys' Brigade Training and Activity Centre Trustees are</h2>
+                <p>dedicated professional volunteers working together to achieve excellence</p>
+            </div>
+        </div>
+
+        <!-- Team Members -->
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    <img src="../media/team/istockphoto-1060213698-612x612.jpg" alt="District President" class="mb-4 shadow">
+                    <h2 class="mb-1">Alan Mcloughlin</h5>
+                    <p class=" mb-3">District President</p>
+                    <p class="small mb-3">Leading our charities vision and strategy for over 30 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    <img src="../media/team/istockphoto-1498876501-612x612.jpg" alt="District Secretary" class="mb-4 shadow">
+                    <h2 class="mb-1">Michael Southern</h5>
+                    <p class=" mb-3">District Secretary</p>
+                    <p class="small mb-3">Ensures the smooth running of the charities administration</p>
+                     <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    <img src="../media/team/istockphoto-598816894-612x612.jpg" alt="District Treasurer" class="mb-4 shadow">
+                    <h2 class="mb-1">Position Vacant</h5>
+                    <p class=" mb-3">District Treasurer</p>
+                    <p class="small mb-3">Manages the financial strategy of our charitiy</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    <img src="../media/team/istockphoto-1188176661-612x612.jpg" alt="Centre Trustee" class="mb-4 shadow">
+                    <h3 class="mb-1">Margaret Heywood</h5>
+                    <p class=" mb-3">Centre Trustee</p>
+                    <p class="small mb-3">Ensures the day to day smooth running of our charity </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--row 2-->
+<section class="py-5">
+    <div class="container">
+   
+
+        <!-- Team Members -->
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    <img src="../media/team/man-s-shadow-on-textured-asphalt-background-free-photo.jpg" alt="Centre Trustee" class="mb-4 shadow">
+                    <h2 class="mb-1">RCW Henderson</h5>
+                    <p class=" mb-3">Centre Trustee</p>
+                    <p class="small mb-3">Managing our charities IT and Health and Safety strategy </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    <img src="../media/team/ron.jpg" alt="District Secretary" class="mb-4 shadow">
+                    <h2 class="mb-1">Ron Reid</h5>
+                    <p class=" mb-3">Centre Trustee</p>
+                    <p class="small mb-3">Focuses on long term stratergy planning For The Charity</p>
+                     <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    <img src="../media/team/carl.jpg" alt="Centre Trustees" class="mb-4 shadow">
+                    <h2 class="mb-1">Carl Fairclough</h5>
+                    <p class=" mb-3">Centre Trustee</p>
+                    <p class="small mb-3">Manages the Human Resources element of our charity</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center p-4">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+
   <div class="spacerDiv"></div>
   <div class="fade-on-scroll">
     <div class="card cardHome footerBackground  mx-auto text-center" style="width: 90%; max-width: 600px;">
@@ -473,6 +476,11 @@
       }
     });
   </script>
+  <script>
+  window.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('page-start').focus();
+  });
+</script>
   <script>
   window.addEventListener('DOMContentLoaded', () => {
     const fadeDiv = document.getElementById('fadeDiv');
